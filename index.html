@@ -85,12 +85,14 @@
 <!-- Custom Styles -->
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-background text-on-background antialiased relative min-h-screen pb-24 md:pb-0" data-bs-spy="scroll" data-bs-target="#navbar">
+<body class="bg-background text-on-background antialiased relative min-h-screen pb-24 md:pb-0 overflow-x-hidden" data-bs-spy="scroll" data-bs-target="#navbar">
 
 <!-- Top Navigation -->
-<nav class="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md flex justify-between items-center px-container-margin py-4 transition-all duration-300 shadow-sm" id="navbar">
-<div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+<nav class="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md transition-all duration-300 shadow-sm" id="navbar">
+<div class="max-w-7xl mx-auto flex justify-between items-center w-full px-4 md:px-container-margin py-3 md:py-4">
 <a class="font-headline-md text-headline-md font-bold text-primary" href="index.html">Melek Mental</a>
+
+<!-- Desktop Nav -->
 <div class="hidden md:flex items-center gap-8 relative">
 <a class="nav-link relative font-body-md text-body-md text-primary font-bold active" href="#beranda">Beranda</a>
 <a class="nav-link relative font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#jurnal">Curhat</a>
@@ -101,16 +103,32 @@
 <div class="hidden md:flex items-center gap-4">
 <a href="masuk.html" class="font-label-md text-label-md px-6 py-2 rounded-full transition-colors shadow-sm bg-primary text-on-primary hover:bg-on-primary-fixed-variant">Masuk / Daftar</a>
 </div>
-<button class="md:hidden text-on-surface p-2">
-<span class="material-symbols-outlined">menu</span>
+
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2" id="mobile-menu-btn" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-2xl">menu</span>
 </button>
+</div>
+
+<!-- Mobile Menu Dropdown -->
+<div class="hidden md:hidden bg-surface/95 backdrop-blur-md border-t border-outline-variant/20" id="mobile-menu">
+<div class="flex flex-col px-4 py-4 gap-3">
+<a class="nav-link font-body-md text-body-md text-on-surface-variant py-2" href="#beranda" onclick="closeMobileMenu()">Beranda</a>
+<a class="nav-link font-body-md text-body-md text-on-surface-variant py-2" href="#jurnal" onclick="closeMobileMenu()">Curhat</a>
+<a class="nav-link font-body-md text-body-md text-on-surface-variant py-2" href="#psikolog" onclick="closeMobileMenu()">Konseling</a>
+<a class="nav-link font-body-md text-body-md text-on-surface-variant py-2" href="#artikel" onclick="closeMobileMenu()">Asupan Waras</a>
+<a class="nav-link font-body-md text-body-md text-on-surface-variant py-2" href="#komunitas" onclick="closeMobileMenu()">Portal Waras</a>
+<div class="pt-2 border-t border-outline-variant/20">
+<a href="masuk.html" class="block text-center font-label-md text-label-md py-3 rounded-full bg-primary text-on-primary">Masuk / Daftar</a>
+</div>
+</div>
 </div>
 </nav>
 
-<main class="pt-24 pb-16">
+<main class="pt-20 md:pt-24 pb-16">
 
 <!-- Hero Section -->
-<section class="px-container-margin max-w-7xl mx-auto py-12 md:py-24 relative overflow-hidden" id="beranda">
+<section class="px-4 md:px-container-margin max-w-7xl mx-auto py-8 md:py-24 relative overflow-hidden" id="beranda">
 <div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-primary-fixed rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
 <div class="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-error-container rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
 <div class="absolute top-[20%] left-[20%] w-72 h-72 bg-secondary-fixed-dim rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-4000"></div>
@@ -123,7 +141,7 @@
 <button class="bg-surface-container-high text-on-surface font-label-md text-label-md px-8 py-4 rounded-full hover:bg-surface-container-highest transition-all duration-300">Cari Psikolog</button>
 </div>
 </div>
-<div class="relative w-full h-[500px] rounded-[2rem] overflow-hidden glass-card soft-shadow">
+<div class="relative w-full h-[300px] md:h-[500px] rounded-[2rem] overflow-hidden glass-card soft-shadow">
 <img alt="Mobile app mockup" class="w-full h-full object-cover opacity-90 mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzHG3Hs4Dgoue7BaNr4jB1H9HXFeBrwE4hqrUo4xKtkbRE9X_PowMO-CQA1R5gOPvAyBiSvPntGWTUJ4icVwHnxZ40AmHpi9Ckc2iuSEKX7_S8idGQ1si_gopYjYkopIBOZcsJN76XhFchWF9u5q-1SyClz_h-cuhP69rK_AkpNVVFt7RUlcv9t_Kj3jvcVfqAI5SQlYrlxijO1oElzhzwOMHKPbI69KziC82rl6ZVFOq0rvmkDLm5-Jk3T2WpFxbjyXn0NFo9MDG4">
 <div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
 <div class="absolute bottom-8 left-8 right-8">
@@ -142,9 +160,9 @@
 </section>
 
 <!-- Bento Box Section -->
-<section class="px-container-margin max-w-7xl mx-auto py-16" id="bento">
-<h2 class="font-headline-lg text-headline-lg text-center mb-12">Kenapa Melek Mental Itu Kunci Pertumbuhanmu?</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 grid-rows-auto">
+<section class="px-4 md:px-container-margin max-w-7xl mx-auto py-12 md:py-16" id="bento">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-center mb-8 md:mb-12">Kenapa Melek Mental Itu Kunci Pertumbuhanmu?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
 <!-- Card 1: AI-Guided Journaling (Wide) -->
 <div class="md:col-span-2 bg-primary-fixed p-8 rounded-[2rem] hover:shadow-md transition-shadow duration-300 relative overflow-hidden group">
 <div class="absolute -right-4 -bottom-4 w-48 h-48 bg-primary opacity-10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
@@ -193,9 +211,9 @@
 </section>
 
 <!-- Interactive Guest Journal -->
-<section class="bg-surface-container-low py-24 px-container-margin" id="jurnal">
+<section class="bg-surface-container-low py-16 md:py-24 px-4 md:px-container-margin" id="jurnal">
 <div class="max-w-3xl mx-auto text-center">
-<h2 class="font-headline-xl text-headline-xl mb-4">Coba Keluarin Semuanya Di Sini...</h2>
+<h2 class="font-headline-lg-mobile md:font-headline-xl text-headline-lg-mobile md:text-headline-xl mb-4">Coba Keluarin Semuanya Di Sini...</h2>
 <p class="font-body-md text-body-md text-on-surface-variant mb-8">Nggak perlu login buat nyoba. Tulis aja apa yang kerasa berat hari ini.</p>
 <div class="bg-surface p-6 rounded-2xl soft-shadow text-left" id="journal-container">
 <div id="input-area">
@@ -224,7 +242,7 @@
 </section>
 
 <!-- Portal Waras Community -->
-<section class="py-24 px-container-margin overflow-hidden" id="komunitas">
+<section class="py-16 md:py-24 px-4 md:px-container-margin overflow-hidden" id="komunitas">
 <div class="max-w-7xl mx-auto">
 <div class="flex justify-between items-end mb-8">
 <div>
@@ -274,7 +292,7 @@
 </section>
 
 <!-- Cari Psikolog -->
-<section class="bg-primary-fixed/30 py-24 px-container-margin rounded-t-[3rem]" id="psikolog">
+<section class="bg-primary-fixed/30 py-16 md:py-24 px-4 md:px-container-margin rounded-t-[2rem] md:rounded-t-[3rem]" id="psikolog">
 <div class="max-w-7xl mx-auto">
 <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
 <div class="max-w-2xl">
@@ -331,7 +349,7 @@
 </section>
 
 <!-- Artikel -->
-<section class="py-24 px-container-margin max-w-7xl mx-auto" id="artikel">
+<section class="py-16 md:py-24 px-4 md:px-container-margin max-w-7xl mx-auto" id="artikel">
 <div class="flex justify-between items-end mb-12">
 <h2 class="font-headline-xl text-headline-xl">Asupan Waras Hari Ini</h2>
 <button class="hidden sm:block font-label-md text-label-md text-primary border border-outline-variant px-6 py-2 rounded-full hover:bg-surface-container transition-colors">Lihat Semua</button>
@@ -350,7 +368,7 @@
 </section>
 
 <!-- Testimonials -->
-<section class="py-16 px-container-margin max-w-7xl mx-auto bg-surface-container-lowest rounded-[3rem]">
+<section class="py-12 md:py-16 px-4 md:px-container-margin max-w-7xl mx-auto bg-surface-container-lowest rounded-[2rem] md:rounded-[3rem]">
 <div class="text-center mb-12"><h3 class="font-headline-lg text-headline-lg mb-2">Kata Mereka</h3><p class="font-body-md text-body-md text-on-surface-variant">Ribuan temen udah nemuin jalan tenangnya.</p></div>
 <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
 <div class="break-inside-avoid bg-surface-container-low p-6 rounded-[2rem] soft-shadow border border-white/40">
@@ -384,7 +402,7 @@
 </main>
 
 <!-- Footer -->
-<footer class="w-full py-12 px-container-margin flex flex-col md:flex-row justify-between items-center gap-6 bg-surface-container-low border-t border-outline-variant/20 max-w-7xl mx-auto">
+<footer class="w-full py-8 md:py-12 px-4 md:px-container-margin flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 bg-surface-container-low border-t border-outline-variant/20 max-w-7xl mx-auto">
 <div class="font-headline-sm text-headline-sm font-bold text-primary">Melek Mental</div>
 <div class="flex flex-wrap justify-center gap-6">
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Tentang Kami</a>
@@ -400,27 +418,29 @@
 </footer>
 
 <!-- Floating Chat Button -->
-<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
-<div class="mb-4 relative animate-bounce">
+<div class="fixed bottom-4 md:bottom-6 right-4 md:right-6 z-50 flex flex-col items-end">
+<!-- Chatbot tip - hidden on mobile -->
+<div class="mb-4 relative animate-bounce hidden md:block">
  <div class="bg-primary-fixed/40 backdrop-blur-md rounded-2xl p-4 soft-shadow border border-white/50 max-w-[200px]">
  <p class="font-label-md text-label-sm text-on-primary-fixed-variant leading-snug font-semibold">Bingung pilih psikolog? Tanya aku di sini! ✨</p>
  </div>
  <div class="absolute -bottom-2 right-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-primary-fixed/40"></div>
 </div>
-<div class="mb-4 w-72 sm:w-80 bg-surface rounded-3xl soft-shadow border border-outline-variant/30 overflow-hidden flex flex-col hidden" id="chatbot-window">
-<div class="bg-primary p-4 flex justify-between items-center">
-<div class="flex items-center gap-2"><div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center"><span class="material-symbols-outlined text-primary text-sm">smart_toy</span></div><span class="font-label-md text-on-primary">Chat Melek Mental</span></div>
+<!-- Chat window -->
+<div class="mb-4 w-72 sm:w-80 bg-surface rounded-3xl soft-shadow border border-outline-variant/30 overflow-hidden flex flex-col hidden fixed bottom-20 right-4 md:bottom-24 md:right-6 z-50 shadow-2xl" id="chatbot-window">
+<div class="bg-primary p-3 md:p-4 flex justify-between items-center">
+<div class="flex items-center gap-2"><div class="w-7 h-7 md:w-8 md:h-8 rounded-full bg-primary-fixed flex items-center justify-center"><span class="material-symbols-outlined text-primary text-sm">smart_toy</span></div><span class="font-label-md text-label-md text-on-primary">Chat Melek Mental</span></div>
 <button class="text-on-primary/80 hover:text-on-primary" onclick="toggleChatbot()"><span class="material-symbols-outlined">close</span></button>
 </div>
-<div class="p-4 h-64 overflow-y-auto flex flex-col gap-4 bg-surface-container-lowest">
+<div class="p-3 md:p-4 h-48 md:h-64 overflow-y-auto flex flex-col gap-4 bg-surface-container-lowest">
 <div class="bg-primary-fixed/30 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%]"><p class="font-body-md text-sm text-on-surface">Halo! Ada yang bisa dibantu?</p></div>
 </div>
-<div class="p-4 bg-surface border-t border-outline-variant/20 flex gap-2">
-<input class="flex-1 bg-surface-container-low border-none rounded-full px-4 py-2 text-sm focus:ring-2 focus:ring-primary/30" placeholder="Tulis pesan..." type="text">
-<button class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center"><span class="material-symbols-outlined text-sm">send</span></button>
+<div class="p-3 md:p-4 bg-surface border-t border-outline-variant/20 flex gap-2">
+<input class="flex-1 bg-surface-container-low border-none rounded-full px-3 md:px-4 py-2 text-sm focus:ring-2 focus:ring-primary/30" placeholder="Tulis pesan..." type="text">
+<button class="w-9 h-9 md:w-10 md:h-10 rounded-full bg-primary text-on-primary flex items-center justify-center"><span class="material-symbols-outlined text-sm">send</span></button>
 </div>
 </div>
-<button class="w-14 h-14 rounded-full bg-primary text-on-primary shadow-lg shadow-primary/30 flex items-center justify-center hover:scale-110 transition-transform duration-300 focus:outline-none" onclick="toggleChatbot()"><span class="material-symbols-outlined text-2xl">chat</span></button>
+<button class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary text-on-primary shadow-lg shadow-primary/30 flex items-center justify-center hover:scale-110 transition-transform duration-300 focus:outline-none" onclick="toggleChatbot()"><span class="material-symbols-outlined text-xl md:text-2xl">chat</span></button>
 </div>
 
 <script src="js/script.js"></script>

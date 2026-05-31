@@ -89,5 +89,28 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+// --- Mobile Menu Toggle ---
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.getElementById('mobile-menu-btn');
+  if (menu) {
+    const isHidden = menu.classList.contains('hidden');
+    menu.classList.toggle('hidden');
+    if (btn) {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) icon.textContent = isHidden ? 'close' : 'menu';
+    }
+  }
+}
+
+function closeMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.getElementById('mobile-menu-btn');
+  if (menu) menu.classList.add('hidden');
+  if (btn) {
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (icon) icon.textContent = 'menu';
+  }
+}
+
 // --- Password Visibility Toggle (if needed later) ---
-// (Placeholder for future enhancement)
