@@ -1,912 +1,697 @@
-<!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Melek Mental - Aplikasi Kesehatan Mental Gen Z</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Material Symbols -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
+<!DOCTYPE html><html lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Melek Mental - Ruang Aman untuk Pikiranmu</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
           theme: {
             extend: {
-              colors: {
-                "primary": "#674bb5",
-                "on-primary": "#ffffff",
-                "primary-container": "#a78bfa",
-                "on-primary-container": "#3c1989",
-                "primary-fixed": "#e8ddff",
-                "primary-fixed-dim": "#cebdff",
-                "on-primary-fixed": "#21005e",
-                "on-primary-fixed-variant": "#4f319c",
-                
-                "secondary": "#50653b",
-                "on-secondary": "#ffffff",
-                "secondary-container": "#d2ebb6",
-                "on-secondary-container": "#566b41",
-                "secondary-fixed": "#d2ebb6",
-                "secondary-fixed-dim": "#b7ce9c",
-                "on-secondary-fixed": "#0f2001",
-                "on-secondary-fixed-variant": "#394c26",
-                
-                "tertiary": "#865318",
-                "on-tertiary": "#ffffff",
-                "tertiary-container": "#ce9051",
-                "on-tertiary-container": "#502c00",
-                "tertiary-fixed": "#ffdcbe",
-                "tertiary-fixed-dim": "#fdb975",
-                "on-tertiary-fixed": "#2d1600",
-                "on-tertiary-fixed-variant": "#6a3c00",
-                
-                "error": "#ba1a1a",
-                "on-error": "#ffffff",
-                "error-container": "#ffdad6",
-                "on-error-container": "#93000a",
-                
-                "background": "#fbf9f2",
-                "on-background": "#1b1c18",
-                "surface": "#fbf9f2",
-                "on-surface": "#1b1c18",
-                "surface-variant": "#e4e2dc",
-                "on-surface-variant": "#494552",
-                "outline": "#7a7583",
-                "outline-variant": "#cac4d4",
-                
-                "surface-container-lowest": "#ffffff",
-                "surface-container-low": "#f5f4ed",
-                "surface-container": "#f0eee7",
-                "surface-container-high": "#eae8e1",
-                "surface-container-highest": "#e4e2dc"
+              "colors": {
+                      "surface-container-high": "#eae8e1",
+                      "error": "#ba1a1a",
+                      "secondary-fixed-dim": "#b7ce9c",
+                      "background": "#fbf9f2",
+                      "surface-container": "#f0eee7",
+                      "on-error": "#ffffff",
+                      "tertiary": "#865318",
+                      "surface-container-highest": "#e4e2dc",
+                      "inverse-surface": "#30312c",
+                      "surface": "#fbf9f2",
+                      "secondary": "#50653b",
+                      "on-tertiary-fixed": "#2d1600",
+                      "on-primary-container": "#3c1989",
+                      "on-background": "#1b1c18",
+                      "tertiary-container": "#ce9051",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#6a3c00",
+                      "surface-container-low": "#f5f4ed",
+                      "on-primary-fixed": "#21005e",
+                      "surface-tint": "#674bb5",
+                      "on-secondary-fixed-variant": "#394c26",
+                      "outline-variant": "#cac4d4",
+                      "surface-variant": "#e4e2dc",
+                      "secondary-container": "#d2ebb6",
+                      "on-surface": "#1b1c18",
+                      "on-secondary-fixed": "#0f2001",
+                      "tertiary-fixed-dim": "#fdb975",
+                      "secondary-fixed": "#d2ebb6",
+                      "primary-fixed-dim": "#cebdff",
+                      "outline": "#7a7583",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#494552",
+                      "primary-fixed": "#e8ddff",
+                      "inverse-primary": "#cebdff",
+                      "surface-bright": "#fbf9f2",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#f3f1ea",
+                      "surface-dim": "#dcdad3",
+                      "tertiary-fixed": "#ffdcbe",
+                      "primary-container": "#a78bfa",
+                      "on-primary-fixed-variant": "#4f319c",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "primary": "#674bb5",
+                      "error-container": "#ffdad6",
+                      "on-secondary-container": "#566b41",
+                      "on-tertiary-container": "#502c00"
               },
-              borderRadius: {
-                "DEFAULT": "1rem",
-                "lg": "2rem",
-                "xl": "3rem",
-                "full": "9999px",
-                "3xl": "1.5rem"
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px",
+                      "3xl": "1.5rem"
               },
-              spacing: {
-                "xs": "4px",
-                "base": "8px",
-                "sm": "12px",
-                "gutter": "16px",
-                "container-margin": "20px",
-                "md": "24px",
-                "lg": "40px",
-                "xl": "64px"
+              "spacing": {
+                      "xs": "4px",
+                      "md": "24px",
+                      "lg": "40px",
+                      "container-margin": "20px",
+                      "sm": "12px",
+                      "base": "8px",
+                      "xl": "64px",
+                      "gutter": "16px"
               },
-              fontFamily: {
-                "body-md": ["Plus Jakarta Sans"],
-                "label-sm": ["Plus Jakarta Sans"],
-                "label-md": ["Plus Jakarta Sans"],
-                "headline-md": ["Plus Jakarta Sans"],
-                "headline-lg": ["Plus Jakarta Sans"],
-                "headline-xl": ["Plus Jakarta Sans"],
-                "headline-lg-mobile": ["Plus Jakarta Sans"]
+              "fontFamily": {
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-sm": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-xl": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg-mobile": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-xl": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ]
               }
-            }
-          }
+      },
+          },
         }
     </script>
-    <style>
+<style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #fbf9f2;
             color: #1b1c18;
             -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
-        
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .material-symbols-outlined.fill-1 { font-variation-settings: 'FILL' 1; }
-
-        /* General Utilities */
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
         .glass-card {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .soft-shadow {
             box-shadow: 0 10px 40px -10px rgba(103, 75, 181, 0.1);
         }
-        
-        /* Wizard Animations */
-        .step-transition { transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
-        .step-hidden {
-            opacity: 0; transform: scale(0.95) translateY(30px); pointer-events: none; position: absolute; visibility: hidden;
-        }
-        .step-visible {
-            opacity: 1; transform: scale(1) translateY(0); position: relative; visibility: visible;
+        .gradient-bg {
+            background: linear-gradient(135deg, #e8ddff 0%, #ffdad6 100%);
         }
         
-        /* Custom Radio Buttons inside Booking Drawer */
-        input[type="radio"]:checked + div.radio-box {
-            background-color: #d2ebb6; /* secondary-container */
-            color: #566b41; /* on-secondary-container */
-            border-color: #50653b; /* secondary */
+        /* Navigation active state styles */
+        .nav-link.active {
+            color: #674bb5; /* primary color */
+            font-weight: 700;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #674bb5;
+            border-radius: 2px;
         }
         
+        /* Custom animations */
         @keyframes blob {
             0% { transform: translate(0px, 0px) scale(1); }
             33% { transform: translate(30px, -50px) scale(1.1); }
             66% { transform: translate(-20px, 20px) scale(0.9); }
             100% { transform: translate(0px, 0px) scale(1); }
         }
-        .animate-blob { animation: blob 7s infinite; }
-        .animation-delay-2000 { animation-delay: 2s; }
-        .animation-delay-4000 { animation-delay: 4s; }
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+        
+        /* Hide scrollbar for horizontal scroll */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
     </style>
 </head>
-<body class="bg-background text-on-background relative min-h-screen pb-24 md:pb-0">
-
-    <!-- SPA STATE MANAGEMENT -->
-    <script>
-        // Global State for Logic Routing
-        let IS_LOGGED_IN = false;
-        
-        function setLoginState(status) {
-            IS_LOGGED_IN = status;
-            // Update UI elements based on state
-            const dirNavBtn = document.getElementById('dir-nav-btn');
-            if(dirNavBtn) {
-                if(status) {
-                    dirNavBtn.innerText = 'Ke Dashboard';
-                    dirNavBtn.setAttribute('onclick', "navigateTo('dashboard')");
-                } else {
-                    dirNavBtn.innerText = 'Masuk / Daftar';
-                    dirNavBtn.setAttribute('onclick', "navigateTo('auth')");
-                }
-            }
+<body class="bg-background text-on-background antialiased relative min-h-screen pb-24 md:pb-0" data-bs-spy="scroll" data-bs-target="#navbar">
+<!-- Top Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-background/80 backdrop-blur-md flex justify-between items-center px-container-margin py-4 transition-all duration-300 shadow-sm" id="navbar">
+<div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+<a class="font-headline-md text-headline-md font-bold text-primary" href="#beranda">Melek Mental</a>
+<div class="hidden md:flex items-center gap-8 relative"><a class="nav-link relative font-body-md text-body-md text-primary font-bold active" href="#beranda">Beranda</a><a class="nav-link relative font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#jurnal">Curhat</a><a class="nav-link relative font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#psikolog">Konseling</a><a class="nav-link relative font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#artikel">Asupan Waras</a><a class="nav-link relative font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#komunitas">Portal Waras</a></div>
+<div class="hidden md:flex items-center gap-4">
+<button class="font-label-md text-label-md px-6 py-2 rounded-full transition-colors shadow-sm bg-primary text-on-primary hover:bg-on-primary-fixed-variant">Masuk / Daftar</button>
+</div>
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-24 pb-16">
+<!-- Hero Section -->
+<section class="px-container-margin max-w-7xl mx-auto py-12 md:py-24 relative overflow-hidden" id="beranda">
+<div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-primary-fixed rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-error-container rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+<div class="absolute top-[20%] left-[20%] w-72 h-72 bg-secondary-fixed-dim rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-4000"></div>
+<div class="grid md:grid-cols-2 gap-12 items-center relative z-10">
+<div class="space-y-8 text-center md:text-left">
+<h1 class="font-headline-xl text-headline-xl md:text-5xl lg:text-6xl text-on-background leading-tight">Ruang Aman untuk Mentalmu Hari Ini.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mx-auto md:mx-0">
+                        Kenali diri lebih baik dengan AI Journaling, temukan ketenangan, dan terhubung dengan psikolog profesional saat kamu butuh bantuan ahli.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-full shadow-lg shadow-primary/20 hover:shadow-xl hover:scale-105 transition-all duration-300">
+                            Coba Curhat AI
+                        </button>
+<button class="bg-surface-container-high text-on-surface font-label-md text-label-md px-8 py-4 rounded-full hover:bg-surface-container-highest transition-all duration-300">
+                            Cari Psikolog
+                        </button>
+</div>
+</div>
+<div class="relative w-full h-[500px] rounded-[2rem] overflow-hidden glass-card soft-shadow">
+<img alt="Mobile app mockup showing a calm, modern interface with soft pastel colors, featuring a mood tracking calendar and a gentle daily greeting. The design uses rounded corners and floating cards on a light background, exuding a peaceful and secure digital environment." class="w-full h-full object-cover opacity-90 mix-blend-overlay" data-alt="A modern smartphone mockup displaying a mental wellness app interface. The screen shows a clean, soft UI with pastel lavender and peach colors, rounded cards, and a mood calendar. The phone is floating gently against an abstract, soft gradient background in light cream and subtle purple, conveying a sense of digital sanctuary, calm, and modern Gen Z aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzHG3Hs4Dgoue7BaNr4jB1H9HXFeBrwE4hqrUo4xKtkbRE9X_PowMO-CQA1R5gOPvAyBiSvPntGWTUJ4icVwHnxZ40AmHpi9Ckc2iuSEKX7_S8idGQ1si_gopYjYkopIBOZcsJN76XhFchWF9u5q-1SyClz_h-cuhP69rK_AkpNVVFt7RUlcv9t_Kj3jvcVfqAI5SQlYrlxijO1oElzhzwOMHKPbI69KziC82rl6ZVFOq0rvmkDLm5-Jk3T2WpFxbjyXn0NFo9MDG4">
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8">
+<div class="bg-surface/90 backdrop-blur-sm p-4 rounded-2xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container">mood</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Gimana harimu?</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Mari catat perasaanmu hari ini.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Box Section -->
+<section class="px-container-margin max-w-7xl mx-auto py-16" id="bento"><h2 class="font-headline-lg text-headline-lg text-center mb-12">Kenapa Melek Mental Itu Kunci Pertumbuhanmu?</h2><div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[240px]"><!-- AI-Guided Journaling (Large/Feature Card) --><div class="md:col-span-2 md:row-span-2 bg-primary-fixed/40 glass-card p-10 rounded-3xl soft-shadow group relative overflow-hidden flex flex-col justify-between border-primary/10"><div class="absolute -right-10 -top-10 w-64 h-64 bg-primary opacity-5 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700"></div><div class="relative z-10"><div class="w-16 h-16 rounded-2xl bg-surface/80 backdrop-blur-md flex items-center justify-center mb-6 shadow-sm"><span class="material-symbols-outlined text-4xl text-primary">psychology</span></div><h3 class="font-headline-xl text-headline-xl mb-4 leading-tight">AI-Guided Journaling</h3><p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">Jurnal cerdas yang didampingi AI dengan perspektif ala psikolog profesional. Bantu kamu melihat masalah dari sudut pandang yang lebih sehat untuk bertumbuh secara personal.</p></div><div class="mt-4 self-start"><button class="font-label-md text-label-md text-primary font-bold flex items-center gap-2 group-hover:gap-3 transition-all">Coba Sekarang <span class="material-symbols-outlined text-sm">arrow_forward</span></button></div></div><!-- Mood Tracker (Medium) --><div class="bg-secondary-container/40 glass-card p-8 rounded-3xl soft-shadow group relative overflow-hidden flex flex-col justify-between border-secondary/10"><div class="relative z-10"><div class="w-12 h-12 rounded-xl bg-surface/80 backdrop-blur-md flex items-center justify-center mb-4 shadow-sm"><span class="material-symbols-outlined text-2xl text-secondary">monitoring</span></div><h3 class="font-headline-md text-headline-md text-lg leading-tight mb-2">Mood Tracker &amp; To-Do List</h3><p class="font-body-md text-body-md text-on-surface-variant text-sm">Pantau emosimu dan dapatkan rekomendasi aktivitas harian personal.</p></div></div><!-- Terintegrasi Psikolog (Medium) --><div class="bg-tertiary-fixed/40 glass-card p-8 rounded-3xl soft-shadow group relative overflow-hidden flex flex-col justify-between border-tertiary/10"><div class="relative z-10"><div class="w-12 h-12 rounded-xl bg-surface/80 backdrop-blur-md flex items-center justify-center mb-4 shadow-sm"><span class="material-symbols-outlined text-2xl text-tertiary">volunteer_activism</span></div><h3 class="font-headline-md text-headline-md text-lg leading-tight mb-2">Terintegrasi Psikolog</h3><p class="font-body-md text-body-md text-on-surface-variant text-sm">Akses langsung ke bantuan ahli jika butuh penanganan mendalam.</p></div></div><!-- Portal Waras (Wide) --><div class="md:col-span-3 bg-blue-100/40 glass-card p-8 rounded-3xl soft-shadow group relative overflow-hidden flex flex-col md:flex-row items-center gap-8 border-blue-200/30"><div class="w-16 h-16 shrink-0 rounded-2xl bg-surface/80 backdrop-blur-md flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-4xl text-blue-600">groups</span></div><div class="flex-1"><h3 class="font-headline-md text-headline-md mb-2">Portal Waras: Kamu Gak Sendiri</h3><p class="font-body-md text-body-md text-on-surface-variant">Ruang aman untuk berbagi semangat dengan teman seperjuangan. Bersama-sama kita tumbuh dan lebih sadar akan pentingnya Personal Growth.</p></div><button class="bg-blue-600 text-white font-label-md px-6 py-3 rounded-full hover:bg-blue-700 transition-colors shadow-sm">Gabung Komunitas</button></div></div></section>
+<!-- Interactive Guest Journal -->
+<section class="bg-surface-container-low py-24 px-container-margin" id="jurnal">
+<div class="max-w-3xl mx-auto text-center"><h2 class="font-headline-xl text-headline-xl mb-4">Coba Keluarin Semuanya Di Sini...</h2><p class="font-body-md text-body-md text-on-surface-variant mb-8">Nggak perlu login buat nyoba. Tulis aja apa yang kerasa berat hari ini.</p><div class="bg-surface p-6 rounded-2xl soft-shadow text-left" id="journal-container"><div id="input-area"><textarea class="w-full bg-surface-container-lowest border-none rounded-2xl p-4 font-body-md text-body-md focus:ring-2 focus:ring-primary/50 resize-none h-40" id="guest-journal-input" placeholder="Coba ceritain, apa yang lagi mengganggu pikiranmu hari ini? Atau ada kejadian seru apa?"></textarea><div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4"><div class="w-full sm:w-1/2"><label class="font-label-sm text-label-sm text-on-surface-variant block mb-2">Level Emosi (1-10)</label><input class="w-full h-2 bg-surface-variant rounded-full appearance-none cursor-pointer accent-primary" max="10" min="1" type="range" value="5"></div><button class="w-full sm:w-auto bg-primary text-on-primary font-label-md text-label-md px-8 py-3 rounded-full hover:bg-on-primary-fixed-variant transition-colors" onclick="submitGuestJournal()">Curhatin Aja</button></div></div><div class="hidden mt-6 p-6 bg-primary-fixed/10 rounded-2xl relative overflow-hidden glass-card" id="journal-response"><div class="filter blur-md opacity-50 select-none"><p class="font-body-md text-sm mb-2">Aku ngerti banget rasanya capek pas lagi banyak pikiran. Wajar kok kalau kamu ngerasa kewalahan hari ini...</p><p class="font-body-md text-sm">Coba tarik napas pelan-pelan. Mungkin kamu butuh waktu sebentar buat break dari semuanya. Jangan lupa kamu udah lakuin yang terbaik.</p></div><div class="absolute inset-0 flex flex-col items-center justify-center bg-surface/40 backdrop-blur-[2px]"><span class="material-symbols-outlined text-4xl text-primary mb-2">lock</span><p class="font-label-md text-label-md text-on-surface font-bold text-center mb-4">Login untuk baca balasan AI &amp; simpan jurnalmu</p><button class="bg-primary text-on-primary font-label-sm px-6 py-2 rounded-full hover:bg-on-primary-fixed-variant transition-colors">Masuk / Daftar</button></div></div></div><script>function submitGuestJournal() { const input = document.getElementById('guest-journal-input').value; if(input.trim() !== '') { document.getElementById('input-area').classList.add('hidden'); document.getElementById('journal-response').classList.remove('hidden'); } }</script></div>
+<script>
+    function submitGuestJournal() {
+        const input = document.getElementById('guest-journal-input').value;
+        if(input.trim() !== '') {
+            document.getElementById('journal-response').classList.remove('hidden');
+        }
+    }
+</script>
+</section>
+<!-- Portal Waras Community Section -->
+<section class="py-24 px-container-margin overflow-hidden" id="komunitas">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-2">Lagi Rame di Portal Waras</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Diskusi aman tanpa judgement bareng komunitas.</p>
+</div>
+<button class="hidden md:block font-label-md text-label-md text-primary hover:underline">Lihat Semua Topik</button>
+</div>
+<!-- Horizontal scroll container -->
+<div class="flex overflow-x-auto gap-6 pb-8 no-scrollbar snap-x snap-mandatory">
+<!-- Thread Card 1 -->
+<div class="snap-center shrink-0 w-80 md:w-96 bg-surface-container-low p-6 rounded-[2rem] soft-shadow border border-white/50">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-xl">🦊</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-1">AnonUser99 <span class="material-symbols-outlined text-xs text-primary" title="Verified Member">verified</span></div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">2 jam lalu</div>
+</div>
+</div>
+<span class="px-2 py-1 bg-surface-container text-xs rounded-md">Karir</span>
+</div>
+<h4 class="font-headline-sm font-semibold mb-2 line-clamp-2">Ngerasa ketinggalan jauh sama temen seangkatan, wajar ga sih?</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-3 mb-4">
+                Tiap buka sosmed isinya orang promosi jabatan atau nikah. Sementara aku masih stuck di kerjaan yang sama udah 3 tahun...
+            </p>
+<div class="flex items-center gap-4 border-t border-outline-variant/30 pt-4">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">chat_bubble</span>
+<span class="text-xs">24 balasan</span>
+</div>
+<div class="flex items-center gap-1 bg-primary-fixed/50 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[10px] text-primary">local_hospital</span>
+<span class="text-[10px] font-bold text-primary">&lt;Dokter Psikolog/&gt; merespon</span>
+</div>
+</div>
+</div>
+<!-- Thread Card 2 -->
+<div class="snap-center shrink-0 w-80 md:w-96 bg-surface-container-low p-6 rounded-[2rem] soft-shadow border border-white/50">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-xl">🐼</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold">SleepyHead</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">5 jam lalu</div>
+</div>
+</div>
+<span class="px-2 py-1 bg-surface-container text-xs rounded-md">Burnout</span>
+</div>
+<h4 class="font-headline-sm font-semibold mb-2 line-clamp-2">Tips recover dari burnout parah?</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-3 mb-4">
+                Badan rasanya lemes banget tiap mau berangkat ngantor. Udah nyoba cuti 2 hari tapi balik kerja tetep sama aja rasanya...
+            </p>
+<div class="flex items-center gap-4 border-t border-outline-variant/30 pt-4">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">chat_bubble</span>
+<span class="text-xs">42 balasan</span>
+</div>
+<div class="flex items-center gap-1 bg-primary-fixed/50 px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[10px] text-primary">local_hospital</span>
+<span class="text-[10px] font-bold text-primary">&lt;Dokter Psikolog/&gt; merespon</span>
+</div>
+</div>
+</div>
+<!-- Thread Card 3 -->
+<div class="snap-center shrink-0 w-80 md:w-96 bg-surface-container-low p-6 rounded-[2rem] soft-shadow border border-white/50">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-error-container flex items-center justify-center text-xl">🦉</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold">NightOwl</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">1 hari lalu</div>
+</div>
+</div>
+<span class="px-2 py-1 bg-surface-container text-xs rounded-md">Relationship</span>
+</div>
+<h4 class="font-headline-sm font-semibold mb-2 line-clamp-2">Gimana cara sehat buat putus kontak sama ortu toxic?</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm line-clamp-3 mb-4">
+                Berat banget rasanya mau set boundaries sama keluarga sendiri, tapi mental udah bener-bener ga kuat denger kritikan tiap hari.
+            </p>
+<div class="flex items-center gap-4 border-t border-outline-variant/30 pt-4">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">chat_bubble</span>
+<span class="text-xs">15 balasan</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Cari Psikolog Section -->
+<section class="bg-primary-fixed/30 py-24 px-container-margin rounded-t-[3rem]" id="psikolog">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-2xl">
+<h2 class="font-headline-xl text-headline-xl mb-4">Butuh Teman Cerita Ahlinya?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Temukan psikolog klinis yang pas buat ngebantu urai benang kusut di kepalamu. Konseling online 100% rahasia.</p>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-full whitespace-nowrap hover:bg-on-primary-fixed-variant transition-colors shadow-sm">Lihat Semua Psikolog</button>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Psychologist Card 1 -->
+<div class="bg-surface p-6 rounded-[2rem] soft-shadow border border-white/60 hover:-translate-y-1 transition-transform">
+<div class="flex items-center gap-4 mb-4">
+<img alt="Portrait of Dr. Anisa" class="w-16 h-16 rounded-full object-cover border-2 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEdWffzjuAdQyKgH78v5L3QIwU4NudYdKDyBXkItxjvGlpj4Bv5l7kSJKTciapKQoj22UtA79JThEsnQDZJ-FpXwtUJNpMQ0dW0CDgSLKyhrOQBvpoVxSdwusJdW4f8Yz0CBOAyvuXzpt9UeilHTaA0LBs5Q5xVQEGo9shjqCPDqckAEfxwv4lWTabqfI143ddM0MEHOUH2v66gr-7Soj2n9smXhoH3pMCdkaIjF2sk7yROnM4xbBMncZgV7oQCtt8AkACVTnxoPu6">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Anisa Rahmawati, M.Psi</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Psikolog Klinis</p>
+</div>
+</div>
+<div class="mb-4">
+<p class="font-label-sm text-on-surface-variant mb-2">Spesialisasi:</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-surface-container text-xs rounded-md">Quarter-life Crisis</span>
+<span class="px-2 py-1 bg-surface-container text-xs rounded-md">Kecemasan</span>
+</div>
+</div>
+<div class="flex justify-between items-center mt-6 pt-4 border-t border-surface-variant/50">
+<div class="flex items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="font-label-md text-label-md text-on-surface">4.9 <span class="text-on-surface-variant font-normal text-xs">(120 review)</span></span>
+</div>
+<button class="font-label-md text-label-md bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full hover:bg-secondary-fixed-dim transition-colors text-sm">Lihat Jadwal</button>
+</div>
+</div>
+<!-- Psychologist Card 2 -->
+<div class="bg-surface p-6 rounded-[2rem] soft-shadow border border-white/60 hover:-translate-y-1 transition-transform">
+<div class="flex items-center gap-4 mb-4">
+<img alt="Portrait of Dr. Budi" class="w-16 h-16 rounded-full object-cover border-2 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzjYnXmmiBQhMyncprwHstefirJ7oj15LpLJ8soJ2iErtZzf96uJfmb6HS3iZJ_Gk5x-AHswRU8ieXYvlCP5orvHJ4aRW2m0kFdeG_v7Z01GeL790OZfpg-vc3llFCJp0GkOl3D2l9RZz4uu0Ogajb_zSw523LIbSMpworjDmZ7RYPNI-0hZx-Qq2crQawx8ZIq7x4s8by6-ouemAy7UoJ7-yk2SB8jAdzAwvBDwb29UlTY8dlT_Z4ME4HHx6KWUVA3ClsyaooA9WP">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Budi Santoso, M.Psi</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Psikolog Klinis</p>
+</div>
+</div>
+<div class="mb-4">
+<p class="font-label-sm text-on-surface-variant mb-2">Spesialisasi:</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-surface-container text-xs rounded-md">Depresi</span>
+<span class="px-2 py-1 bg-surface-container text-xs rounded-md">Manajemen Emosi</span>
+</div>
+</div>
+<div class="flex justify-between items-center mt-6 pt-4 border-t border-surface-variant/50">
+<div class="flex items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="font-label-md text-label-md text-on-surface">4.8 <span class="text-on-surface-variant font-normal text-xs">(85 review)</span></span>
+</div>
+<button class="font-label-md text-label-md bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full hover:bg-secondary-fixed-dim transition-colors text-sm">Lihat Jadwal</button>
+</div>
+</div>
+<!-- Psychologist Card 3 -->
+<div class="bg-surface p-6 rounded-[2rem] soft-shadow border border-white/60 hover:-translate-y-1 transition-transform">
+<div class="flex items-center gap-4 mb-4">
+<img alt="Portrait of Dr. Citra" class="w-16 h-16 rounded-full object-cover border-2 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCev95T6dkmuunUuqdzMJkqElNRVfJKKtk6yfg1OJcyTS99bh79ZUkpE6X0Em5AkWT7tPhj3O0RAZHKKYPLa0aW71bC6mect2GeHC1IAnpUNuTPrxUsrW7K524SaZEQYbfE0S0yBZdR1eIxrzKAMVIoTnLSaWYH5vIDoDGancLiLZv58MKx5XARs02rMdxEq7B7Anwrgok4iK2A-I2MOJug9h0fZF2vH1iD2BV9svNrupifzESi31v_M1OOwXwu8m1SQqHtEo1Z2SNx">
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Citra Kirana, M.Psi</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Konselor Hubungan</p>
+</div>
+</div>
+<div class="mb-4">
+<p class="font-label-sm text-on-surface-variant mb-2">Spesialisasi:</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-surface-container text-xs rounded-md">Toxic Relationship</span>
+<span class="px-2 py-1 bg-surface-container text-xs rounded-md">Family Issue</span>
+</div>
+</div>
+<div class="flex justify-between items-center mt-6 pt-4 border-t border-surface-variant/50">
+<div class="flex items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="font-label-md text-label-md text-on-surface">5.0 <span class="text-on-surface-variant font-normal text-xs">(210 review)</span></span>
+</div>
+<button class="font-label-md text-label-md bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full hover:bg-secondary-fixed-dim transition-colors text-sm">Lihat Jadwal</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Artikel Kesehatan Mental -->
+<section class="py-24 px-container-margin max-w-7xl mx-auto" id="artikel">
+<div class="flex justify-between items-end mb-12">
+<h2 class="font-headline-xl text-headline-xl">Asupan Waras Hari Ini</h2>
+<button class="hidden sm:block font-label-md text-label-md text-primary border border-outline-variant px-6 py-2 rounded-full hover:bg-surface-container transition-colors">Lihat Semua</button>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Article Card 1 (Instagram style) -->
+<a class="block group relative" href="#">
+<div class="aspect-[4/5] bg-surface-container-lowest rounded-[2rem] overflow-hidden soft-shadow transition-transform duration-300 group-hover:-translate-y-2 relative">
+<img alt="Abstract soft pastel illustration representing burnout" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJU-eEwbq14Iq0XXIg3r2iFshQCNfcqqrwp_U7LFv-0-Thy4GNysZQ69lg86h5mvzcKhWAIqos_DghreyoMPQZW6SdOtMC-hIsoy86OrQvxdDH7r-OMQLqKR3jjiGWGSZJSH-dEV3jB8_pjuJNT7fSdP-xMAXkgmWtjYx2dgFP7vy3Md8lBSqdIdZ6yMM0m5WUpk9HXtUkAs6SQu_U2i2_j9SvrPRVKQdRP-J644rHR2eJdMYIfEbokg0ts44SgbtZVGtFUxU5HJl4">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
+<div class="flex items-center gap-2 mb-3">
+<span class="px-3 py-1 bg-error/80 text-white font-label-sm text-[10px] rounded-full uppercase tracking-wider backdrop-blur-sm">Burnout</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2 leading-tight">Beda Lelah Biasa vs Burnout yang Wajib Kamu Tahu</h3>
+<p class="font-label-sm opacity-80">5 min read</p>
+</div>
+</div>
+</a>
+<!-- Article Card 2 -->
+<a class="block group relative" href="#">
+<div class="aspect-[4/5] bg-surface-container-lowest rounded-[2rem] overflow-hidden soft-shadow transition-transform duration-300 group-hover:-translate-y-2 relative">
+<img alt="A calm cup of tea and a book, representing self-care" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzHkrzQtxktPOg3WmUyvbvWlkdDJoI0QPxxdCaQ7_EBKEgInQrhzXnX10nvn1hTXOA5WPLH00WoSWQ_5HEoypCjISmdT8Ucx5bLdzvtgVNYw58coTbA6r8RWqcGOUJj4FleKjBX5RIpePhHGgSmJTielDTMVyRP8FDB3WZjV12ijm3LZO6kyilZnuxFPLj9fB_71NS5KWjiIAaTPACtzPdhWu5Db8NefIFISO5d6LgHV7NVaESHVnjJHCjrJg-R5a0hBw_zYzRfeqx">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
+<div class="flex items-center gap-2 mb-3">
+<span class="px-3 py-1 bg-secondary/80 text-white font-label-sm text-[10px] rounded-full uppercase tracking-wider backdrop-blur-sm">Self-Care</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2 leading-tight">Rutinitas Pagi Sederhana Bikin Harimu Lebih Chill</h3>
+<p class="font-label-sm opacity-80">3 min read</p>
+</div>
+</div>
+</a>
+<!-- Article Card 3 -->
+<a class="block group relative" href="#">
+<div class="aspect-[4/5] bg-surface-container-lowest rounded-[2rem] overflow-hidden soft-shadow transition-transform duration-300 group-hover:-translate-y-2 relative">
+<img alt="Two friends talking deeply, representing relationships and boundaries" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWglKHPqTbLoWMnkaz4RxCZ1nk4Mh16PWlxzrcOeVzh1CPhdV5pdaPeoPjH_JUykQC2pX3NgjFmFFcTq9ODOBTgMBrzSHCVaZfRBs-jPxqqJB6uouLegz73ephYf5vKrIDQlv1MixyqIQeu_uBjKunwvUHiubxgNeOqx4Aq4hYsnunP5Aj36xDFvVAJkzYh4G_2_kF6FbEqJkvn4TwBjgsB2ACo_449TiWoO_3sShiVvHyLVqa70o35DNyz9TAc3IlL7ubxLGuIR6z">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
+<div class="flex items-center gap-2 mb-3">
+<span class="px-3 py-1 bg-tertiary/80 text-white font-label-sm text-[10px] rounded-full uppercase tracking-wider backdrop-blur-sm">Boundaries</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2 leading-tight">Cara Bilang 'Nggak' Tanpa Ngerasa Bersalah</h3>
+<p class="font-label-sm opacity-80">6 min read</p>
+</div>
+</div>
+</a>
+</div>
+<div class="mt-6 text-center sm:hidden">
+<button class="font-label-md text-label-md text-primary border border-outline-variant px-6 py-2 rounded-full hover:bg-surface-container transition-colors">Lihat Semua</button>
+</div>
+</section>
+<!-- Masonry Testimonials -->
+<section class="py-16 px-container-margin max-w-7xl mx-auto bg-surface-container-lowest rounded-[3rem]">
+<div class="text-center mb-12">
+<h3 class="font-headline-lg text-headline-lg mb-2">Kata Mereka</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Ribuan temen udah nemuin jalan tenangnya.</p>
+</div>
+<div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+<!-- Review 1 -->
+<div class="break-inside-avoid bg-surface-container-low p-6 rounded-[2rem] soft-shadow border border-white/40">
+<div class="flex gap-1 text-tertiary-container mb-3">
+<span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+<p class="font-body-md text-sm text-on-surface italic mb-4">"Awalnya ragu konsul online, tapi Kak Anisa beneran dengerin tanpa ngejudge. Nyesel ga dari dulu."</p>
+<div class="font-label-sm text-on-surface font-bold">— Rara, 21th (Telekonseling)</div>
+</div>
+<!-- Review 2 -->
+<div class="break-inside-avoid bg-primary-fixed/20 p-6 rounded-[2rem] soft-shadow border border-white/40">
+<div class="flex gap-1 text-tertiary-container mb-3">
+<span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+<p class="font-body-md text-sm text-on-surface italic mb-4">"AI Journaling-nya ngebantu banget pas lagi panic attack tengah malem dan ga ada temen ngobrol. Berasa punya temen yang selalu ada."</p>
+<div class="font-label-sm text-on-surface font-bold">— Bimo, 24th (AI Journaling)</div>
+</div>
+<!-- Review 3 -->
+<div class="break-inside-avoid bg-surface-container-low p-6 rounded-[2rem] soft-shadow border border-white/40">
+<div class="flex gap-1 text-tertiary-container mb-3">
+<span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+<p class="font-body-md text-sm text-on-surface italic mb-4">"Portal waras tuh beneran nyelametin kewarasanku. Baca curhatan anon lain bikin ngerasa ga sendirian ngadepin quarter life crisis."</p>
+<div class="font-label-sm text-on-surface font-bold">— Dinda, 23th (Portal Waras)</div>
+</div>
+<!-- Review 4 -->
+<div class="break-inside-avoid bg-surface-container-low p-6 rounded-[2rem] soft-shadow border border-white/40">
+<div class="flex gap-1 text-tertiary-container mb-3">
+<span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm">star</span>
+</div>
+<p class="font-body-md text-sm text-on-surface italic mb-4">"Aplikasinya smooth dan warnanya bikin kalem. Suka banget sama fitur mood tracker-nya."</p>
+<div class="font-label-sm text-on-surface font-bold">— Kevin, 20th</div>
+</div>
+<!-- Review 5 -->
+<div class="break-inside-avoid bg-secondary-fixed/20 p-6 rounded-[2rem] soft-shadow border border-white/40">
+<div class="flex gap-1 text-tertiary-container mb-3">
+<span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span><span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+<p class="font-body-md text-sm text-on-surface italic mb-4">"Sesi konseling sama dr. Budi ngebuka mataku soal trauma masa kecil. Prosesnya emang sakit, tapi perlahan membaik."</p>
+<div class="font-label-sm text-on-surface font-bold">— Anon, 25th (Video Call)</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-container-margin flex flex-col md:flex-row justify-between items-center gap-6 bg-surface-container-low border-t border-outline-variant/20 max-w-7xl mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold text-primary">Melek Mental</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Tentang Kami</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Kebijakan Privasi</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">S&amp;K</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Bantuan</a>
+</div>
+<div class="flex gap-4">
+<!-- Social Icons Placeholders -->
+<a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary-fixed hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary-fixed hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant w-full md:w-auto text-center mt-4 md:mt-0">
+            © 2024 Melek Mental.
+        </div>
+</footer>
+<!-- Floating SOS Panic Button -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end"><div class="mb-4 relative animate-bounce">
+    <div class="bg-primary-fixed/40 backdrop-blur-md rounded-2xl p-4 soft-shadow border border-white/50 max-w-[200px]">
+        <p class="font-label-md text-label-sm text-on-primary-fixed-variant leading-snug font-semibold">
+            Bingung pilih psikolog? Tanya aku di sini! ✨
+        </p>
+    </div>
+    <div class="absolute -bottom-2 right-6 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[8px] border-t-primary-fixed/40"></div>
+</div>
+<!-- Chat Pop-up -->
+<div class="mb-4 w-72 sm:w-80 bg-surface rounded-3xl soft-shadow border border-outline-variant/30 overflow-hidden flex flex-col hidden" id="chatbot-window">
+<div class="bg-primary p-4 flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">smart_toy</span>
+</div>
+<span class="font-label-md text-on-primary">Chat Melek Mental</span>
+</div>
+<button class="text-on-primary/80 hover:text-on-primary" onclick="toggleChatbot()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-4 h-64 overflow-y-auto flex flex-col gap-4 bg-surface-container-lowest">
+<div class="bg-primary-fixed/30 p-3 rounded-2xl rounded-tl-none self-start max-w-[85%]">
+<p class="font-body-md text-sm text-on-surface">Halo! Ada yang bisa dibantu?</p>
+</div>
+</div>
+<div class="p-4 bg-surface border-t border-outline-variant/20 flex gap-2">
+<input class="flex-1 bg-surface-container-low border-none rounded-full px-4 py-2 text-sm focus:ring-2 focus:ring-primary/30" placeholder="Tulis pesan..." type="text">
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+<!-- Toggle Button -->
+<button class="w-14 h-14 rounded-full bg-primary text-on-primary shadow-lg shadow-primary/30 flex items-center justify-center hover:scale-110 transition-transform duration-300 focus:outline-none" onclick="toggleChatbot()">
+<span class="material-symbols-outlined text-2xl">chat</span>
+</button>
+<script>
+        function toggleChatbot() {
+            const window = document.getElementById('chatbot-window');
+            window.classList.toggle('hidden');
         }
     </script>
+</div>
+<script>
+    // Simple ScrollSpy implementation for Top Navigation
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-    <!-- ==========================================
-         SCREEN 1: LANDING PAGE 
-         ========================================== -->
-    <div id="screen-landing" class="block">
-        <nav class="fixed top-0 left-0 w-full z-40 bg-background/80 backdrop-blur-md flex justify-between items-center px-container-margin py-4 shadow-sm border-b border-outline-variant/20">
-            <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
-                <a class="text-xl font-bold text-primary cursor-pointer" onclick="navigateTo('landing')">Melek Mental</a>
-                <div class="hidden md:flex items-center gap-8 font-medium text-on-surface-variant">
-                    <a href="#beranda" class="text-primary font-bold">Beranda</a>
-                    <a onclick="navigateTo('directory')" class="hover:text-primary cursor-pointer">Konseling</a>
-                </div>
-                <button onclick="navigateTo('auth')" class="px-6 py-2 rounded-full font-bold text-sm bg-primary text-on-primary hover:bg-on-primary-fixed-variant transition-colors shadow-sm">Masuk / Daftar</button>
-            </div>
-        </nav>
-
-        <main class="pt-24 pb-16">
-            <section class="px-container-margin max-w-7xl mx-auto py-12 md:py-24 relative overflow-hidden" id="beranda">
-                <div class="absolute top-[-10%] right-[-5%] w-96 h-96 bg-primary-fixed rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
-                <div class="grid md:grid-cols-2 gap-12 items-center relative z-10">
-                    <div class="space-y-6 text-center md:text-left">
-                        <h1 class="text-4xl md:text-5xl lg:text-6xl text-on-background leading-tight font-extrabold">Ruang Aman untuk Mentalmu Hari Ini.</h1>
-                        <p class="text-lg text-on-surface-variant">Kenali diri lebih baik dengan AI Journaling, temukan ketenangan, dan terhubung dengan psikolog profesional.</p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                            <button onclick="navigateTo('wizard')" class="bg-primary text-on-primary font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-all">Coba Curhat AI</button>
-                            <button onclick="navigateTo('directory')" class="bg-surface-container-high text-on-surface font-bold px-8 py-4 rounded-full hover:bg-surface-variant transition-all">Cari Psikolog</button>
-                        </div>
-                    </div>
-                    <div class="relative w-full h-[400px] rounded-[2rem] glass-card flex flex-col items-center justify-center p-8 text-center bg-gradient-to-br from-primary-fixed to-secondary-fixed">
-                        <span class="material-symbols-outlined text-6xl text-primary mb-4 animate-bounce">spa</span>
-                        <h3 class="text-2xl font-bold text-on-surface mb-2">Sanctuary Digital Gen Z</h3>
-                        <p class="text-sm text-on-surface-variant">Tempat di mana segala emosimu valid tanpa penghakiman.</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
-
-    <!-- ==========================================
-         SCREEN 2: AUTHENTICATION (LOGIN/REGISTER)
-         ========================================== -->
-    <div id="screen-auth" class="hidden min-h-screen bg-surface flex flex-col md:flex-row overflow-x-hidden relative">
-        <div class="w-full md:w-1/2 flex flex-col bg-surface-container-lowest px-container-margin py-16 md:px-16 justify-center relative z-10">
-            <header class="absolute top-0 left-0 w-full p-6">
-                <div onclick="navigateTo('landing')" class="flex items-center gap-2 cursor-pointer w-max">
-                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white"><span class="material-symbols-outlined text-sm">spa</span></div>
-                    <span class="text-lg text-primary font-bold">Melek Mental</span>
-                </div>
-            </header>
-            <div class="max-w-md w-full mx-auto mt-12">
-                <h1 class="text-3xl text-on-surface font-bold mb-2">Selamat Datang.</h1>
-                <p class="text-on-surface-variant text-sm mb-8">Masuk untuk melanjutkan perjalanan pemulihan batinmu.</p>
-                <form class="flex flex-col gap-4" onsubmit="event.preventDefault(); setLoginState(true); navigateTo('dashboard');">
-                    <div>
-                        <label class="text-xs font-bold text-on-surface mb-1 block">Email</label>
-                        <input class="w-full bg-surface-container-low rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary" type="email" required value="ahmad.latif@binus.ac.id">
-                    </div>
-                    <div>
-                        <label class="text-xs font-bold text-on-surface mb-1 block">Password</label>
-                        <input class="w-full bg-surface-container-low rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary" type="password" required value="Rahasia123">
-                    </div>
-                    <button class="w-full mt-4 py-3 bg-primary text-white font-bold rounded-full shadow-md hover:bg-on-primary-fixed-variant transition-colors" type="submit">Masuk Ke Dashboard</button>
-                </form>
-            </div>
-        </div>
-        <div class="hidden md:flex w-1/2 bg-gradient-to-br from-primary-fixed to-secondary-fixed items-center justify-center p-8">
-            <div class="glass-card rounded-[2rem] p-8 max-w-md text-center border-white/40 shadow-2xl">
-                <span class="material-symbols-outlined text-primary text-5xl mb-4 fill-1">format_quote</span>
-                <p class="text-xl font-bold text-primary leading-snug">"Satu langkah jujur mengakui lelah adalah awal pemulihan."</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ==========================================
-         SCREEN 3: PSYCHOLOGIST DIRECTORY (CONSULTATION HUB)
-         ========================================== -->
-    <div id="screen-directory" class="hidden bg-background min-h-screen relative pb-24 md:pb-0 overflow-x-hidden">
-        <nav class="hidden md:flex justify-between items-center h-20 px-gutter md:px-xl max-w-7xl mx-auto fixed top-0 w-full z-40 bg-background/90 backdrop-blur-md shadow-sm border-b border-outline-variant/20">
-            <div class="text-lg font-bold text-primary tracking-tight cursor-pointer" onclick="if(IS_LOGGED_IN){navigateTo('dashboard')}else{navigateTo('landing')}">Melek Mental</div>
-            <div class="flex gap-md font-medium text-sm">
-                <a onclick="if(IS_LOGGED_IN){navigateTo('dashboard')}else{navigateTo('landing')}" class="text-on-surface-variant cursor-pointer hover:text-primary transition-all">Kembali</a>
-                <a class="text-primary font-bold border-b-2 border-primary pb-1">Direktori Konseling</a>
-            </div>
-            <button id="dir-nav-btn" onclick="navigateTo('auth')" class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold text-sm shadow-sm hover:bg-on-primary-fixed-variant transition-colors">Masuk / Daftar</button>
-        </nav>
-
-        <main class="pt-10 md:pt-32 px-gutter md:px-xl max-w-7xl mx-auto space-y-12">
-            <section class="text-center space-y-6 max-w-3xl mx-auto">
-                <h1 class="text-3xl md:text-5xl font-extrabold text-primary">Temukan Teman Cerita Ahlinya</h1>
-                <p class="text-on-surface-variant">Dukungan profesional yang dirancang khusus untuk perjalanan kesehatan mentalmu di lingkungan yang aman.</p>
-                <div class="relative w-full max-w-2xl mx-auto group">
-                    <span class="material-symbols-outlined absolute left-6 top-1/2 -translate-y-1/2 text-outline-variant group-focus-within:text-primary transition-colors text-2xl">search</span>
-                    <input class="w-full bg-surface-container-lowest border border-surface-dim rounded-full py-4 pl-14 pr-6 text-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/50 shadow-sm transition-all" placeholder="Cari nama atau spesialisasi (misal: Quarter-life crisis)..." type="text">
-                </div>
-                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 pt-4">
-                    <div class="flex items-center gap-2 text-on-surface-variant bg-surface-container-low px-4 py-2 rounded-full">
-                        <span class="material-symbols-outlined text-secondary text-[20px] fill-1">shield</span>
-                        <span class="text-xs font-bold">100% Rahasia Terjamin</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-on-surface-variant bg-surface-container-low px-4 py-2 rounded-full">
-                        <span class="material-symbols-outlined text-primary text-[20px] fill-1">verified</span>
-                        <span class="text-xs font-bold">Psikolog Berlisensi SIPP</span>
-                    </div>
-                </div>
-            </section>
+        window.addEventListener('scroll', () => {
+            let current = '';
             
-            <section class="pb-20">
-                <div class="flex overflow-x-auto gap-6 snap-x snap-mandatory scroll-smooth no-scrollbar px-2 py-4 md:grid md:grid-cols-2 lg:grid-cols-3">
-                    <!-- Doctor 1 -->
-                    <div class="min-w-[85vw] md:min-w-0 snap-center bg-surface-container-lowest border border-surface-dim rounded-[24px] p-6 shadow-sm hover:shadow-md transition-all flex flex-col h-full">
-                        <div class="flex items-start gap-4 mb-4">
-                            <div class="w-16 h-16 rounded-full bg-primary-container/30 flex items-center justify-center shrink-0 font-bold text-xl text-primary">NR</div>
-                            <div>
-                                <h3 class="font-bold text-lg text-on-surface leading-tight">Nabilah R., M.Psi</h3>
-                                <div class="inline-flex items-center gap-1 bg-secondary-container/50 text-on-secondary-container px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase mt-1">
-                                    <span class="material-symbols-outlined text-[12px]">psychology</span> Psikolog Klinis
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-sm text-on-surface-variant italic mb-4 flex-grow">"Menciptakan ruang aman untuk mengurai benang pikiranmu pelan-pelan."</p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-[10px] font-bold">Kecemasan</span>
-                            <span class="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-[10px] font-bold">Anak Rantau</span>
-                        </div>
-                        <div class="border-t border-surface-dim pt-4">
-                            <div class="flex justify-between items-center mb-4">
-                                <span class="text-xs text-on-surface-variant flex items-center gap-1"><span class="text-tertiary-container">⭐ 4.9</span> | 145 sesi</span>
-                                <span class="text-sm font-bold text-primary">Rp 150.000 <span class="text-[10px] font-normal text-on-surface-variant">/ sesi</span></span>
-                            </div>
-                            <!-- TRIGGER DRAWER -->
-                            <button onclick="openDrawer()" class="w-full bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed py-3 rounded-full text-xs font-bold transition-colors">Lihat Profil & Jadwal</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        
-        <!-- DRAWER COMPONENT (Slide Over for Booking) -->
-        <div class="fixed inset-0 bg-surface-variant/40 backdrop-blur-sm z-50 transition-opacity duration-300 opacity-0 pointer-events-none" id="drawer-backdrop" onclick="closeDrawer()"></div>
-        
-        <div class="fixed inset-y-0 right-0 w-full md:w-[500px] max-w-full bg-surface shadow-2xl z-[60] transform translate-x-full transition-transform duration-500 ease-in-out flex flex-col rounded-l-[2rem]" id="slide-over">
-            <!-- Header Sticky -->
-            <div class="flex items-center justify-between p-6 border-b border-surface-container-high bg-surface/90 backdrop-blur-md sticky top-0 z-10 rounded-tl-[2rem]">
-                <h2 class="text-xl font-extrabold text-primary">Jadwalkan Sesi</h2>
-                <button class="p-2 rounded-full hover:bg-surface-container transition-colors text-on-surface-variant" onclick="closeDrawer()">
-                    <span class="material-symbols-outlined">close</span>
-                </button>
-            </div>
-            
-            <!-- Scrollable Content -->
-            <div class="flex-1 overflow-y-auto no-scrollbar p-6 pb-24">
-                <!-- Profile Area -->
-                <section class="flex flex-col items-center text-center mb-8">
-                    <div class="w-24 h-24 rounded-full bg-primary-container/30 flex items-center justify-center font-bold text-3xl text-primary border-4 border-surface shadow-lg mb-4">NR</div>
-                    <h3 class="text-2xl font-bold text-on-surface">Kak Nabilah, S.Psi.</h3>
-                    <div class="flex items-center justify-center gap-4 mt-2 mb-4 text-xs font-bold text-on-surface-variant">
-                        <span><span class="text-tertiary-container">⭐</span> 4.9 Rating</span>
-                        <div class="w-1 h-1 bg-outline-variant rounded-full"></div>
-                        <span>120+ Sesi</span>
-                    </div>
-                    <p class="text-sm text-on-surface-variant italic px-4">"Siap nemenin kamu mengurai benang kusut di kepala pelan-pelan. Ruang aman tanpa di-judge, buat kamu yang butuh didengar."</p>
-                </section>
-                
-                <hr class="border-surface-container-high my-6">
-                
-                <!-- Booking Flow -->
-                <section>
-                    <div class="flex justify-between items-center mb-4">
-                        <h4 class="text-lg font-bold text-primary">Pilih Waktu (Juni 2026)</h4>
-                        <span class="bg-surface-container px-3 py-1 rounded-full text-[10px] font-bold">WIB (Tersinkron JST)</span>
-                    </div>
-                    
-                    <!-- Date Cards -->
-                    <div class="flex gap-3 overflow-x-auto no-scrollbar pb-2 mb-6">
-                        <label class="cursor-pointer flex-shrink-0">
-                            <input checked class="peer sr-only" name="b_date" type="radio">
-                            <div class="radio-box w-[70px] h-[85px] rounded-2xl flex flex-col items-center justify-center border border-outline-variant transition-all hover:bg-surface-container-high">
-                                <span class="text-[10px] font-bold opacity-80">Kam</span>
-                                <span class="text-2xl font-black mt-1">4</span>
-                            </div>
-                        </label>
-                        <label class="cursor-pointer flex-shrink-0">
-                            <input class="peer sr-only" name="b_date" type="radio">
-                            <div class="radio-box w-[70px] h-[85px] rounded-2xl flex flex-col items-center justify-center border border-outline-variant transition-all hover:bg-surface-container-high">
-                                <span class="text-[10px] font-bold opacity-80">Jum</span>
-                                <span class="text-2xl font-black mt-1">5</span>
-                            </div>
-                        </label>
-                        <label class="cursor-pointer flex-shrink-0">
-                            <input class="peer sr-only" name="b_date" type="radio">
-                            <div class="radio-box w-[70px] h-[85px] rounded-2xl flex flex-col items-center justify-center border border-outline-variant transition-all hover:bg-surface-container-high">
-                                <span class="text-[10px] font-bold opacity-80">Sab</span>
-                                <span class="text-2xl font-black mt-1">6</span>
-                            </div>
-                        </label>
-                    </div>
-
-                    <!-- Time Slots -->
-                    <div class="grid grid-cols-3 gap-3 mb-8">
-                        <label class="cursor-pointer">
-                            <input class="peer sr-only" name="b_time" type="radio">
-                            <div class="radio-box py-3 text-center rounded-xl border border-outline-variant text-sm font-bold transition-all">09:00</div>
-                        </label>
-                        <label class="cursor-pointer">
-                            <input checked class="peer sr-only" name="b_time" type="radio">
-                            <div class="radio-box py-3 text-center rounded-xl border border-outline-variant text-sm font-bold transition-all">14:00</div>
-                        </label>
-                        <label class="cursor-pointer">
-                            <input class="peer sr-only" name="b_time" type="radio">
-                            <div class="radio-box py-3 text-center rounded-xl border border-outline-variant text-sm font-bold transition-all">19:00</div>
-                        </label>
-                    </div>
-
-                    <!-- Form Inputs -->
-                    <div class="mb-6">
-                        <label class="block text-xs font-bold text-on-surface mb-2">Ceritain dikit dong, apa yang lagi mengganjal?</label>
-                        <textarea class="w-full bg-surface-container-low border-none rounded-xl p-4 text-sm focus:ring-2 focus:ring-primary/50 resize-none" placeholder="Cth: Akhir-akhir ini ngerasa gampang capek dan susah fokus kerja..." rows="3"></textarea>
-                    </div>
-                    
-                    <!-- Sync Journal Checkbox -->
-                    <label class="flex items-start gap-4 p-4 bg-primary-fixed/30 rounded-2xl border border-primary/20 cursor-pointer hover:bg-primary-fixed/50 transition-colors">
-                        <div class="pt-0.5"><input checked class="w-5 h-5 rounded border-primary text-primary focus:ring-primary" type="checkbox"></div>
-                        <div>
-                            <span class="block text-sm font-bold text-primary mb-1">Izinkan psikolog melihat Ringkasan Jurnal AI-ku</span>
-                            <span class="block text-xs text-on-surface-variant">Biar kamu nggak perlu cerita dari nol lagi. Data dijamin rahasia.</span>
-                        </div>
-                    </label>
-                </section>
-            </div>
-            
-            <!-- Sticky Footer Action inside Drawer -->
-            <div class="p-6 border-t border-surface-container-high bg-surface sticky bottom-0 z-10 flex items-center justify-between rounded-bl-[2rem]">
-                <div>
-                    <span class="block text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">Total Biaya</span>
-                    <span class="text-xl font-black text-on-surface">Rp 150k</span>
-                </div>
-                <button onclick="confirmBooking()" class="bg-primary text-white font-bold py-4 px-8 rounded-full shadow-lg hover:scale-105 transition-transform flex items-center gap-2">
-                    Konfirmasi & Bayar <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- ==========================================
-         SCREEN 4: BENTO DASHBOARD 
-         ========================================== -->
-    <div id="screen-dashboard" class="hidden bg-background min-h-screen relative pb-24 md:pb-0">
-        <nav class="hidden md:flex fixed top-0 left-0 w-full z-40 bg-background/90 backdrop-blur-md justify-between items-center px-container-margin py-3 border-b border-outline-variant/20 shadow-sm">
-            <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
-                <span class="text-lg font-bold text-primary">Melek Mental <span class="text-[10px] bg-secondary-container px-2 py-0.5 rounded-full text-on-secondary-container">Dash</span></span>
-                <div class="flex items-center gap-6 text-sm font-medium text-on-surface-variant">
-                    <button class="text-primary font-bold border-b-2 border-primary pb-1">Dashboard</button>
-                    <button onclick="navigateTo('wizard')" class="hover:text-primary">Jurnal AI</button>
-                    <button onclick="navigateTo('directory')" class="hover:text-primary">Konseling</button>
-                    <button onclick="navigateTo('journey')" class="hover:text-primary">Perjalanan Mental</button>
-                </div>
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs font-bold">AL</div>
-                    <button onclick="setLoginState(false); navigateTo('landing')" class="text-xs font-bold text-red-500 hover:underline">Keluar</button>
-                </div>
-            </div>
-        </nav>
-
-        <main class="max-w-7xl mx-auto px-container-margin pt-6 md:pt-24 pb-8">
-            <div class="mb-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-2 bg-white/50 p-4 rounded-2xl glass-card shadow-sm border-white">
-                <div>
-                    <h1 class="text-2xl font-extrabold">Otsukare, Ahmad Latif! 👋</h1>
-                    <p class="text-xs text-on-surface-variant mt-1">Sore ini rasanya agak lelah? Mari kita breakdown pelan-pelan.</p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                <!-- Mood Tracker -->
-                <div class="col-span-12 bg-white p-6 rounded-[2rem] shadow-sm border border-outline-variant/10">
-                    <h3 class="text-sm font-bold flex items-center gap-2 mb-4"><span class="material-symbols-outlined text-primary fill-1">heart_celebrate</span>Kondisimu Sekarang</h3>
-                    <div class="flex gap-4 overflow-x-auto no-scrollbar">
-                        <button onclick="updateTodo('sad')" class="text-4xl hover:scale-110 transition-transform bg-surface-container rounded-2xl p-2">😭</button>
-                        <button onclick="updateTodo('sad')" class="text-4xl hover:scale-110 transition-transform bg-surface-container rounded-2xl p-2">😔</button>
-                        <button onclick="updateTodo('neutral')" class="text-4xl hover:scale-110 transition-transform bg-surface-container rounded-2xl p-2">😐</button>
-                        <button onclick="updateTodo('happy')" class="text-4xl hover:scale-110 transition-transform bg-surface-container rounded-2xl p-2">🙂</button>
-                    </div>
-                </div>
-
-                <!-- Jurnal Shortcut -->
-                <div class="col-span-12 md:col-span-7 bg-primary-fixed/30 p-6 rounded-[2rem] shadow-sm border border-primary/20 flex flex-col justify-between items-start">
-                    <div>
-                        <h3 class="font-bold text-primary flex items-center gap-2 mb-2"><span class="material-symbols-outlined">auto_awesome</span> Sesi Jurnal AI</h3>
-                        <p class="text-sm text-on-surface-variant mb-4">Selesaikan pikiran kusutmu hari ini lewat Jurnal Wizard interaktif.</p>
-                    </div>
-                    <button onclick="navigateTo('wizard')" class="bg-primary text-white font-bold px-6 py-3 rounded-full hover:scale-105 transition-all shadow-md">Mulai Menulis Jurnal</button>
-                </div>
-
-                <!-- To-Do List -->
-                <div class="col-span-12 md:col-span-5 bg-white p-6 rounded-[2rem] shadow-sm border border-outline-variant/10">
-                    <h3 class="font-bold text-sm flex items-center gap-2 mb-4"><span class="material-symbols-outlined text-secondary">task_alt</span> Target Mikro</h3>
-                    <div id="todo-list" class="flex flex-col gap-3">
-                        <!-- Filled by JS -->
-                    </div>
-                </div>
-
-                <!-- Counseling Hub -->
-                <div class="col-span-12 md:col-span-6 bg-white p-6 rounded-[2rem] shadow-sm border border-outline-variant/10">
-                    <h3 class="font-bold text-sm flex items-center gap-2 mb-4"><span class="material-symbols-outlined text-error">calendar_today</span> Jadwal Konseling</h3>
-                    <div class="bg-primary/5 border border-primary/10 p-4 rounded-2xl mb-4">
-                        <p class="text-xs font-bold">Nabilah Rahmawati, M.Psi</p>
-                        <p class="text-xs text-on-surface-variant mb-3">Besok, 19:00 WIB</p>
-                        <div class="flex gap-2">
-                            <button onclick="openModal('meet')" class="bg-primary text-white text-xs font-bold px-4 py-2 rounded-full shadow-sm">Buka G-Meet</button>
-                            <button onclick="openModal('reschedule')" class="border border-primary text-primary text-xs font-bold px-4 py-2 rounded-full">Reschedule</button>
-                        </div>
-                    </div>
-                    <button onclick="openModal('report')" class="text-xs text-primary font-bold underline">Lihat Hasil Konseling Sebelumnya</button>
-                </div>
-                
-                <!-- Journey Shortcut -->
-                <div class="col-span-12 md:col-span-6 bg-white p-6 rounded-[2rem] shadow-sm border border-outline-variant/10 flex flex-col justify-center items-center text-center">
-                    <span class="material-symbols-outlined text-4xl text-secondary mb-2">monitoring</span>
-                    <h3 class="font-bold mb-1">Perjalanan Mentalmu</h3>
-                    <p class="text-xs text-on-surface-variant mb-4">Lihat analitik perkembangan emosimu dari bulan ke bulan.</p>
-                    <button onclick="navigateTo('journey')" class="bg-secondary text-white text-xs font-bold px-6 py-2 rounded-full">Lihat Analitik</button>
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <!-- ==========================================
-         SCREEN 5: AI JOURNALING WIZARD 
-         ========================================== -->
-    <div id="screen-wizard" class="hidden min-h-screen bg-background flex flex-col relative overflow-hidden">
-        <div class="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-primary-fixed blur-[100px] opacity-60 pointer-events-none"></div>
-        <div class="absolute -bottom-32 -left-32 w-[500px] h-[500px] rounded-full bg-secondary-fixed blur-[100px] opacity-60 pointer-events-none"></div>
-
-        <header class="w-full relative z-20 flex justify-between items-center px-6 py-6 max-w-5xl mx-auto">
-            <button onclick="if(IS_LOGGED_IN){navigateTo('dashboard')}else{navigateTo('landing')}" class="flex items-center text-on-surface-variant hover:text-primary transition-all font-bold text-sm bg-white/50 px-4 py-2 rounded-full backdrop-blur-md">
-                <span class="material-symbols-outlined mr-1">close</span> Batal
-            </button>
-            <div class="text-sm font-bold text-primary tracking-widest uppercase">Jurnal AI</div>
-        </header>
-
-        <main class="w-full max-w-3xl mx-auto px-6 pt-4 pb-24 flex-grow flex flex-col relative z-10">
-            <!-- Progress Bar -->
-            <div class="w-full h-2 bg-primary/10 rounded-full mb-10 relative overflow-hidden">
-                <div id="wiz-progress" class="absolute left-0 top-0 h-full bg-primary rounded-full transition-all duration-500" style="width: 25%;"></div>
-            </div>
-
-            <!-- Wizard Step 1: Brain Dump -->
-            <div id="wiz-step-1" class="step-visible flex flex-col gap-6">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-on-surface">Tumpahkan semua isi kepalamu.</h2>
-                <p class="text-on-surface-variant">Ketik apapun tanpa filter. Biarkan AI memilah dan mendengarkannya.</p>
-                <div class="bg-white/60 backdrop-blur-xl border border-white/80 rounded-3xl p-6 shadow-sm">
-                    <textarea class="w-full min-h-[250px] bg-transparent border-none focus:ring-0 text-lg resize-none placeholder:text-outline/50" placeholder="Misal: Aku sangat kewalahan dengan tugas kuliah dan kerja shift..."></textarea>
-                </div>
-                <button onclick="wizNext(2)" class="self-end bg-primary text-white font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-transform flex items-center gap-2">Lanjut <span class="material-symbols-outlined">arrow_forward</span></button>
-            </div>
-
-            <!-- Wizard Step 2: Emotion Selection (With Custom Emotion) -->
-            <div id="wiz-step-2" class="step-hidden flex flex-col gap-6">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-on-surface">Validasi perasaanmu.</h2>
-                <p class="text-on-surface-variant">Pilih emosi dominan yang paling mewakili curhatanmu tadi.</p>
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4" id="emotions-grid">
-                    <button class="bg-white/50 border border-white/60 p-6 rounded-2xl text-left hover:bg-primary/10 focus:ring-2 focus:ring-primary focus:bg-primary/10 transition-all group">
-                        <span class="text-3xl block mb-2 group-hover:scale-110 transition-transform">😔</span><span class="font-bold">Sedih</span>
-                    </button>
-                    <button class="bg-white/50 border border-white/60 p-6 rounded-2xl text-left hover:bg-primary/10 focus:ring-2 focus:ring-primary focus:bg-primary/10 transition-all group">
-                        <span class="text-3xl block mb-2 group-hover:scale-110 transition-transform">😰</span><span class="font-bold">Cemas</span>
-                    </button>
-                    <!-- Custom Emotion Trigger -->
-                    <button onclick="document.getElementById('custom-emotion-box').classList.toggle('hidden'); document.getElementById('custom-emotion-input').focus();" class="bg-primary/5 border-2 border-dashed border-primary/30 p-6 rounded-2xl flex flex-col items-center justify-center hover:bg-primary/10 transition-all">
-                        <span class="material-symbols-outlined text-primary mb-1">add_circle</span><span class="font-bold text-primary text-sm">Lainnya</span>
-                    </button>
-                </div>
-                
-                <!-- Custom Emotion Input -->
-                <div id="custom-emotion-box" class="hidden">
-                    <input id="custom-emotion-input" type="text" placeholder="Ketik emosimu dan tekan Enter..." class="w-full bg-white/50 border-primary rounded-xl p-4 focus:ring-2 focus:ring-primary" onkeydown="handleCustomEmotion(event)">
-                </div>
-
-                <div class="flex justify-between mt-8">
-                    <button onclick="wizPrev(1)" class="font-bold text-on-surface-variant hover:text-primary">Kembali</button>
-                    <button onclick="wizNext(3)" class="bg-primary text-white font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-transform flex items-center gap-2">Lanjut <span class="material-symbols-outlined">arrow_forward</span></button>
-                </div>
-            </div>
-
-            <!-- Wizard Step 3: Body Reaction -->
-            <div id="wiz-step-3" class="step-hidden flex flex-col gap-6">
-                <h2 class="text-3xl md:text-4xl font-extrabold text-on-surface">Reaksi Tubuhmu.</h2>
-                <p class="text-on-surface-variant">Emosi juga dirasakan oleh fisik. Di mana kamu merasakannya?</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <label class="group flex items-center p-5 bg-white/50 rounded-2xl cursor-pointer hover:bg-white/80 transition-all border border-white/60">
-                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center mr-4 group-has-[:checked]:bg-primary group-has-[:checked]:text-white transition-all shadow-sm"><span class="material-symbols-outlined text-xl">monitor_heart</span></div>
-                        <span class="font-bold text-sm flex-grow">Jantung berdebar</span>
-                        <input class="hidden" type="checkbox">
-                    </label>
-                    <label class="group flex items-center p-5 bg-white/50 rounded-2xl cursor-pointer hover:bg-white/80 transition-all border border-white/60">
-                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center mr-4 group-has-[:checked]:bg-primary group-has-[:checked]:text-white transition-all shadow-sm"><span class="material-symbols-outlined text-xl">self_improvement</span></div>
-                        <span class="font-bold text-sm flex-grow">Otot bahu tegang</span>
-                        <input class="hidden" type="checkbox">
-                    </label>
-                </div>
-                <div class="flex justify-between mt-8">
-                    <button onclick="wizPrev(2)" class="font-bold text-on-surface-variant hover:text-primary">Kembali</button>
-                    <button onclick="startAiAnalysis()" class="bg-primary text-white font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-transform flex items-center gap-2">Minta Insight AI <span class="material-symbols-outlined">auto_awesome</span></button>
-                </div>
-            </div>
-
-            <!-- Wizard Step 4: Loading (Fake AI Processing) -->
-            <div id="wiz-step-4" class="step-hidden flex flex-col items-center justify-center min-h-[300px] text-center">
-                <div class="relative w-24 h-24 mb-6">
-                    <div class="absolute inset-0 border-4 border-primary rounded-full border-t-transparent animate-spin"></div>
-                    <span class="absolute inset-0 flex items-center justify-center material-symbols-outlined text-3xl text-primary animate-pulse">psychology</span>
-                </div>
-                <h2 class="text-2xl font-bold text-primary mb-2">Menenangkan Pikiran...</h2>
-                <p class="text-sm text-on-surface-variant">AI kami sedang memahami nuansa perasaanmu.</p>
-            </div>
-
-            <!-- Wizard Step 5: Result / AI Insight -->
-            <div id="wiz-step-5" class="step-hidden flex flex-col gap-6 text-center pt-8">
-                <span class="material-symbols-outlined text-6xl text-primary animate-bounce">volunteer_activism</span>
-                <h2 class="text-3xl font-extrabold">Kamu sudah berjuang keras.</h2>
-                <div class="bg-white/60 backdrop-blur-xl border border-white/80 rounded-3xl p-6 shadow-sm text-left">
-                    <h4 class="text-sm font-bold text-primary mb-2 uppercase tracking-wider">Perspektif AI</h4>
-                    <p class="text-on-surface leading-relaxed text-sm italic">"Rasa lelah dan cemas yang kamu alami akibat tumpukan kuliah dan pekerjaan shift sangatlah valid. Ingatlah bahwa beristirahat bukan berarti kamu lemah, melainkan mengisi ulang energi untuk berlari lebih jauh. Mari jadwalkan jeda 10 menit malam ini."</p>
-                </div>
-                
-                <!-- Dynamic Button based on Login Status -->
-                <div id="wizard-final-btn-container" class="mt-4">
-                    <!-- Injected via JS -->
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <!-- ==========================================
-         SCREEN 6: MENTAL JOURNEY (ANALYTICS)
-         ========================================== -->
-    <div id="screen-journey" class="hidden min-h-screen bg-background relative pb-24 md:pb-0">
-        <header class="w-full px-container-margin py-6 max-w-7xl mx-auto flex justify-between items-center bg-white/50 backdrop-blur-md sticky top-0 z-30 shadow-sm border-b border-outline-variant/30">
-            <div>
-                <h1 class="text-2xl font-extrabold text-on-surface">Perjalanan Mentalmu 📈</h1>
-            </div>
-            <button onclick="navigateTo('dashboard')" class="w-10 h-10 rounded-full bg-surface-container hover:bg-surface-variant flex items-center justify-center">
-                <span class="material-symbols-outlined">close</span>
-            </button>
-        </header>
-
-        <main class="max-w-7xl mx-auto px-container-margin pt-8 pb-12 flex flex-col gap-6">
-            <!-- Stats -->
-            <div class="grid grid-cols-2 gap-4">
-                <div class="glass-card rounded-[2rem] p-6 bg-white/50 text-center">
-                    <p class="text-xs text-on-surface-variant font-bold uppercase mb-2">Total Sesi Jurnal</p>
-                    <p class="text-4xl font-black text-primary">24</p>
-                </div>
-                <div class="glass-card rounded-[2rem] p-6 bg-white/50 text-center">
-                    <p class="text-xs text-on-surface-variant font-bold uppercase mb-2">Mood Dominan Bulan Ini</p>
-                    <p class="text-2xl font-black text-secondary mt-2">Tenang 🙂</p>
-                </div>
-            </div>
-
-            <!-- Comparison -->
-            <div class="glass-card rounded-[2rem] p-6 bg-gradient-to-br from-primary-fixed/40 to-secondary-fixed/40 border-white/60">
-                <h2 class="font-bold text-lg mb-4">Dulu vs Sekarang</h2>
-                <div class="flex flex-col gap-4">
-                    <div class="border-l-4 border-error pl-4">
-                        <p class="text-xs font-bold text-on-surface-variant mb-1">Bulan Pertama</p>
-                        <div class="flex gap-2"><span class="px-2 py-1 bg-error-container text-[10px] rounded-md font-bold text-error">#Cemas</span><span class="px-2 py-1 bg-surface-variant text-[10px] rounded-md font-bold">#Burnout</span></div>
-                    </div>
-                    <div class="border-l-4 border-primary pl-4 mt-2">
-                        <p class="text-xs font-bold text-primary mb-1">Bulan Ini</p>
-                        <div class="flex gap-2"><span class="px-2 py-1 bg-primary-fixed text-[10px] rounded-md font-bold text-primary">#Tenang</span><span class="px-2 py-1 bg-secondary-container text-[10px] rounded-md font-bold text-secondary">#Terkendali</span></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Badges -->
-            <div class="glass-card rounded-[2rem] p-6 bg-white/50">
-                <h2 class="font-bold text-lg mb-4">Pencapaian Konsistensi</h2>
-                <div class="flex gap-4 overflow-x-auto no-scrollbar pb-2">
-                    <div class="min-w-[120px] bg-primary/10 rounded-2xl p-4 text-center border border-primary/20">
-                        <span class="material-symbols-outlined text-3xl text-primary mb-2 fill-1">local_florist</span>
-                        <p class="text-[10px] font-bold">Pencari Tenang</p>
-                    </div>
-                    <div class="min-w-[120px] bg-secondary/10 rounded-2xl p-4 text-center border border-secondary/20">
-                        <span class="material-symbols-outlined text-3xl text-secondary mb-2 fill-1">psychology</span>
-                        <p class="text-[10px] font-bold">Ahli Refleksi</p>
-                    </div>
-                    <div class="min-w-[120px] bg-surface-variant/50 rounded-2xl p-4 text-center opacity-50 grayscale">
-                        <span class="material-symbols-outlined text-3xl mb-2">lock</span>
-                        <p class="text-[10px] font-bold">Master Zen</p>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <!-- ==========================================
-         GLOBAL MOBILE BOTTOM NAV (Visible if logged in, hidden on Auth/Wizard/Landing)
-         ========================================== -->
-    <nav id="global-mobile-nav" class="hidden md:hidden justify-around items-center px-4 py-3 w-full fixed bottom-0 z-40 bg-surface/90 backdrop-blur-xl border-t border-outline-variant/30">
-        <button onclick="navigateTo('dashboard')" class="flex flex-col items-center text-primary"><span class="material-symbols-outlined fill-1">dashboard</span><span class="text-[10px] font-bold">Dash</span></button>
-        <button onclick="navigateTo('directory')" class="flex flex-col items-center text-on-surface-variant"><span class="material-symbols-outlined">clinical_notes</span><span class="text-[10px] font-bold">Psikolog</span></button>
-        <button onclick="navigateTo('journey')" class="flex flex-col items-center text-on-surface-variant"><span class="material-symbols-outlined">monitoring</span><span class="text-[10px] font-bold">Progres</span></button>
-    </nav>
-
-
-    <!-- ==========================================
-         MODALS
-         ========================================== -->
-    <!-- Meet Modal -->
-    <div id="modal-meet" class="hidden fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity">
-        <div class="relative w-full max-w-md bg-surface/95 backdrop-blur-xl rounded-[24px] shadow-2xl border border-surface-variant/50 p-8 flex flex-col items-center text-center">
-            <button onclick="closeModal('meet')" class="absolute top-4 right-4 p-2 text-on-surface-variant hover:text-primary bg-surface-container rounded-full">
-                <span class="material-symbols-outlined text-[20px]">close</span>
-            </button>
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 relative">
-                <div class="absolute inset-0 bg-primary/20 rounded-full animate-pulse"></div>
-                <span class="material-symbols-outlined text-primary text-3xl z-10">video_camera_front</span>
-            </div>
-            <h2 class="text-xl font-bold mb-2">Sesi Siap Dimulai!</h2>
-            <p class="text-sm text-on-surface-variant mb-6">Konselormu (Kak Nabilah) sudah menunggu. Siapkan tempat yang nyaman.</p>
-            <button onclick="closeModal('meet')" class="w-full bg-primary text-white font-bold py-4 rounded-xl shadow-md hover:bg-primary/90 flex items-center justify-center gap-2">
-                Buka di Google Meet <span class="material-symbols-outlined">open_in_new</span>
-            </button>
-        </div>
-    </div>
-
-    <!-- Reschedule Modal -->
-    <div id="modal-reschedule" class="hidden fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="relative w-full max-w-md bg-surface/95 backdrop-blur-xl rounded-[24px] shadow-2xl p-6 flex flex-col">
-            <div class="flex justify-between items-center border-b border-outline-variant/30 pb-4 mb-4">
-                <h2 class="text-lg font-bold">Reschedule Session</h2>
-                <button onclick="closeModal('reschedule')" class="p-1 rounded-full bg-surface-container"><span class="material-symbols-outlined text-[20px]">close</span></button>
-            </div>
-            <p class="text-xs text-on-surface-variant mb-4">Pilih jadwal baru (WIB/JST tersinkron otomatis).</p>
-            
-            <label class="text-xs font-bold mb-1">Tanggal Baru:</label>
-            <select class="w-full bg-surface-container rounded-xl p-3 text-sm mb-4 border-none focus:ring-2 focus:ring-primary">
-                <option>Kamis, 4 Juni 2026 (Tersedia)</option>
-                <option>Sabtu, 6 Juni 2026 (Tersedia)</option>
-            </select>
-            
-            <label class="text-xs font-bold mb-1">Jam Konseling:</label>
-            <div class="grid grid-cols-3 gap-2 mb-6">
-                <button class="bg-surface border border-outline-variant rounded-lg py-2 text-sm hover:border-primary">09:00</button>
-                <button class="bg-primary-fixed border-2 border-primary text-primary font-bold rounded-lg py-2 text-sm">13:00</button>
-                <button class="bg-surface border border-outline-variant rounded-lg py-2 text-sm hover:border-primary">19:00</button>
-            </div>
-
-            <button onclick="closeModal('reschedule'); alert('Jadwal berhasil diperbarui!');" class="w-full bg-primary text-white font-bold py-3 rounded-full">Konfirmasi Jadwal Baru</button>
-        </div>
-    </div>
-
-    <!-- Report Modal -->
-    <div id="modal-report" class="hidden fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="relative w-full max-w-md bg-surface/95 backdrop-blur-xl rounded-[24px] shadow-2xl p-6 flex flex-col max-h-[80vh] overflow-y-auto no-scrollbar">
-            <button onclick="closeModal('report')" class="absolute top-4 right-4 p-2 bg-surface-container rounded-full"><span class="material-symbols-outlined text-[20px]">close</span></button>
-            
-            <h2 class="text-2xl font-extrabold mb-1 mt-6">Ringkasan Sesi</h2>
-            <p class="text-xs font-bold text-primary mb-6 uppercase tracking-widest">Oleh Kak Nabilah, S.Psi.</p>
-
-            <div class="bg-primary-fixed/30 rounded-2xl p-5 mb-4 border border-primary/10">
-                <h3 class="text-sm font-bold text-primary flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-sm">edit_note</span> Catatan Klinis</h3>
-                <p class="text-xs leading-relaxed text-on-surface">Kita telah mendiskusikan rasa lelah (burnout) yang dipicu oleh bentrokan jadwal kerja dan kuliah. Kamu sudah hebat bisa mengidentifikasi pemicunya. Jangan lupa, membuat batasan (boundaries) butuh proses, pelan-pelan saja.</p>
-            </div>
-
-            <div class="bg-secondary-container/20 rounded-2xl p-5 mb-6 border border-secondary/10">
-                <h3 class="text-sm font-bold text-secondary flex items-center gap-2 mb-3"><span class="material-symbols-outlined text-sm">psychiatry</span> Target Lanjutan</h3>
-                
-                <label class="flex items-start gap-3 p-2 bg-white/50 rounded-xl mb-2 cursor-pointer group">
-                    <input type="checkbox" checked class="task-checkbox mt-0.5 rounded text-secondary border-outline-variant focus:ring-secondary w-4 h-4">
-                    <span class="text-xs text-on-surface font-medium task-label">Lakukan teknik grounding 5-4-3-2-1 setiap pagi.</span>
-                </label>
-                <label class="flex items-start gap-3 p-2 bg-white/50 rounded-xl cursor-pointer group">
-                    <input type="checkbox" class="task-checkbox mt-0.5 rounded text-secondary border-outline-variant focus:ring-secondary w-4 h-4">
-                    <span class="text-xs text-on-surface font-medium task-label">Tulis jurnal saat merasa panik di tempat kerja.</span>
-                </label>
-            </div>
-
-            <button onclick="closeModal('report')" class="w-full bg-surface-container-high border border-outline-variant font-bold text-sm py-3 rounded-full hover:bg-surface-variant">Tutup Laporan</button>
-        </div>
-    </div>
-
-
-    <!-- ==========================================
-         CORE JAVASCRIPT LOGIC
-         ========================================== -->
-    <script>
-        // ROUTER & NAVIGATION
-        function navigateTo(screenId) {
-            // Hide all
-            document.querySelectorAll('div[id^="screen-"]').forEach(el => el.classList.add('hidden'));
-            
-            // Show Target
-            document.getElementById('screen-' + screenId).classList.remove('hidden');
-            window.scrollTo(0,0);
-            
-            // Re-init dynamic data
-            if(screenId === 'dashboard') { updateTodo('neutral'); }
-            
-            // Reset Wizard if opened
-            if(screenId === 'wizard') { resetWizard(); }
-            
-            // Handle Global Mobile Nav Visibility
-            const mobileNav = document.getElementById('global-mobile-nav');
-            if (IS_LOGGED_IN && (screenId === 'dashboard' || screenId === 'directory' || screenId === 'journey')) {
-                mobileNav.classList.remove('hidden');
-                mobileNav.classList.add('flex');
-            } else {
-                mobileNav.classList.remove('flex');
-                mobileNav.classList.add('hidden');
-            }
-            
-            // Handle Directory Top Nav Button based on Login Status
-            const dirNavBtn = document.getElementById('dir-nav-btn');
-            if(dirNavBtn) {
-                if(IS_LOGGED_IN) {
-                    dirNavBtn.innerText = 'Profil Saya';
-                    dirNavBtn.setAttribute('onclick', "navigateTo('dashboard')");
-                } else {
-                    dirNavBtn.innerText = 'Masuk / Daftar';
-                    dirNavBtn.setAttribute('onclick', "navigateTo('auth')");
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
                 }
-            }
-        }
+            });
 
-        // DRAWER (SLIDE OVER) LOGIC FOR BOOKING
-        function openDrawer() {
-            document.getElementById('drawer-backdrop').classList.remove('opacity-0', 'pointer-events-none');
-            document.getElementById('slide-over').classList.remove('translate-x-full');
-        }
-
-        function closeDrawer() {
-            document.getElementById('slide-over').classList.add('translate-x-full');
-            document.getElementById('drawer-backdrop').classList.add('opacity-0', 'pointer-events-none');
-        }
-
-        function confirmBooking() {
-            if(IS_LOGGED_IN) {
-                closeDrawer();
-                alert("Pembayaran berhasil! Sesi konseling telah ditambahkan ke Dashboard Anda.");
-            } else {
-                closeDrawer();
-                alert("Sesi kamu tersimpan. Silakan login atau buat akun untuk melanjutkan pembayaran.");
-                navigateTo('auth');
-            }
-        }
-
-        function handleBooking() {
-            // Deprecated direct alert, now triggers Drawer.
-            openDrawer();
-        }
-
-        // MODALS
-        function openModal(modalId) { document.getElementById('modal-' + modalId).classList.remove('hidden'); }
-        function closeModal(modalId) { document.getElementById('modal-' + modalId).classList.add('hidden'); }
-
-        // DASHBOARD TO-DO
-        function updateTodo(mood) {
-            const container = document.getElementById('todo-list');
-            if(mood === 'sad') {
-                container.innerHTML = `
-                    <label class="flex items-center gap-3 p-3 bg-error-container/20 border border-error/20 rounded-xl cursor-pointer">
-                        <input type="checkbox" class="rounded text-error focus:ring-error border-error/50 w-4 h-4">
-                        <span class="text-xs font-bold text-error">Napas lambat 4-4-4 selama 1 menit</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 bg-surface-container rounded-xl cursor-pointer">
-                        <input type="checkbox" class="rounded text-primary focus:ring-primary border-outline-variant w-4 h-4">
-                        <span class="text-xs font-medium text-on-surface">Cuci muka dengan air dingin (Grounding)</span>
-                    </label>
-                `;
-            } else {
-                container.innerHTML = `
-                    <label class="flex items-center gap-3 p-3 bg-surface-container rounded-xl cursor-pointer">
-                        <input type="checkbox" class="rounded text-primary focus:ring-primary border-outline-variant w-4 h-4">
-                        <span class="text-xs font-medium text-on-surface">Minum air putih 2 gelas</span>
-                    </label>
-                    <label class="flex items-center gap-3 p-3 bg-surface-container rounded-xl cursor-pointer">
-                        <input type="checkbox" class="rounded text-primary focus:ring-primary border-outline-variant w-4 h-4">
-                        <span class="text-xs font-medium text-on-surface">Tulis 1 hal yang disyukuri hari ini di Jurnal</span>
-                    </label>
-                `;
-            }
-        }
-
-        // JOURNAL WIZARD
-        function resetWizard() {
-            // Reset to step 1
-            for(let i=1; i<=5; i++) {
-                document.getElementById('wiz-step-' + i).classList.replace('step-visible', 'step-hidden');
-            }
-            document.getElementById('wiz-step-1').classList.replace('step-hidden', 'step-visible');
-            document.getElementById('wiz-progress').style.width = "20%";
+            navLinks.forEach(link => {
+                link.classList.remove('active', 'text-primary', 'font-bold');
+                link.classList.add('text-on-surface-variant');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active', 'text-primary', 'font-bold');
+                    link.classList.remove('text-on-surface-variant');
+                }
+            });
             
-            // Adjust final button based on Login State
-            const finalBtnContainer = document.getElementById('wizard-final-btn-container');
-            if(IS_LOGGED_IN) {
-                finalBtnContainer.innerHTML = `<button onclick="navigateTo('dashboard')" class="w-full bg-secondary text-white font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-transform">Selesai & Simpan ke Perjalanan Mental</button>`;
+            // Handle navbar background on scroll
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('bg-background/80', 'bg-surface/95');
             } else {
-                finalBtnContainer.innerHTML = `<button onclick="navigateTo('auth')" class="w-full bg-error text-white font-bold px-8 py-4 rounded-full shadow-lg hover:scale-105 transition-transform flex items-center justify-center gap-2">Simpan Insight & Buat Akun Gratis <span class="material-symbols-outlined">lock_open</span></button>`;
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('bg-surface/95', 'bg-background/80');
             }
-        }
+        });
+    });
+</script>
 
-        function wizNext(step) {
-            document.getElementById(`wiz-step-${step-1}`).classList.replace('step-visible', 'step-hidden');
-            setTimeout(() => {
-                document.getElementById(`wiz-step-${step}`).classList.replace('step-hidden', 'step-visible');
-                document.getElementById('wiz-progress').style.width = (step * 20) + "%";
-            }, 400);
-        }
-        
-        function wizPrev(step) {
-            document.getElementById(`wiz-step-${step+1}`).classList.replace('step-visible', 'step-hidden');
-            setTimeout(() => {
-                document.getElementById(`wiz-step-${step}`).classList.replace('step-hidden', 'step-visible');
-                document.getElementById('wiz-progress').style.width = (step * 20) + "%";
-            }, 400);
-        }
 
-        function startAiAnalysis() {
-            wizNext(4); // Show Loader
-            setTimeout(() => {
-                wizNext(5); // Show Result after 2.5s
-            }, 2500);
-        }
 
-        function handleCustomEmotion(event) {
-            if(event.key === 'Enter' && event.target.value.trim() !== '') {
-                const grid = document.getElementById('emotions-grid');
-                const box = document.getElementById('custom-emotion-box');
-                const btn = document.createElement('button');
-                btn.className = 'bg-primary/10 border border-primary p-6 rounded-2xl text-left hover:bg-primary/20 transition-all group';
-                btn.innerHTML = `<span class="text-xs font-bold text-primary uppercase block mb-1">Kustom</span><span class="font-bold text-primary">${event.target.value}</span>`;
-                
-                grid.insertBefore(btn, grid.lastElementChild);
-                event.target.value = '';
-                box.classList.add('hidden');
-            }
-        }
-        
-        // INIT
-        setLoginState(false); // Start as guest
-    </script>
-</body>
-</html>
+
+
+
+
+
+</body></html>
